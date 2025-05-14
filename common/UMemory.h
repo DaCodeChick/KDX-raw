@@ -8,7 +8,7 @@ typedef HGLOBAL TPtr;
 typedef void *TPtr;
 #endif
 
-class UMemory
+class EXPORT UMemory
 {
 public:
 	static void Clear(void *outDest, uint inSize);

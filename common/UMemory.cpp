@@ -24,6 +24,7 @@ void UMemory::Dispose(HGLOBAL inPtr)
 uint UMemory::Move(void *outDest, const void *inSrc, uint inSize)
 {
 	std::memmove(outDest, inSrc, inSize);
+	return inSize;
 }
 
 TPtr UMemory::New(uint inSize)

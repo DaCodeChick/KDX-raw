@@ -1,6 +1,6 @@
 #include "UError.h"
 
-void __Fail(short inID)
+void __Fail(uint inID)
 {
 	SError err;
 	err.id = inID;

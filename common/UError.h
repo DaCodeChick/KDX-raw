@@ -11,4 +11,4 @@ struct SError
 	uint field4_0x10;
 };
 
-void __Fail(short inID);
+EXPORT void __Fail(uint inID);

@@ -2,7 +2,7 @@
 
 #include "typedefs.h"
 
-class UDateTime
+class EXPORT UDateTime
 {
 public:
 	static int GetMilliseconds();

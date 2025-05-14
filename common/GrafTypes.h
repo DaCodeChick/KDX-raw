@@ -2,7 +2,7 @@
 
 #include "typedefs.h"
 
-struct SRect
+struct EXPORT SRect
 {
 	int left, right, top, bottom;
 
