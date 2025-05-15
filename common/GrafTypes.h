@@ -10,3 +10,6 @@ struct EXPORT SRect
 	bool GetIntersection(const LPRECT inRectA, const LPRECT inRectB);
 	bool GetUnion(const LPRECT inRectA, const LPRECT inRectB);
 };
+
+const double gm_2Pi;
+const double gm_Pi;
