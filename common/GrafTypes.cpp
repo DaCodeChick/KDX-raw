@@ -1,11 +1,5 @@
 #include "GrafTypes.h"
 
-// AppearanceEdit.exe: 00475328
-double gm_2Pi = 6.283185307179586;
-
-// AppearanceEdit.exe: 00475340
-double gm_Pi = 3.141592653589793;
-
 // AppearanceEdit.exe: 00439d90
 // KDXClient.exe: 004a33e0
 void SRect::Constrain(const LPRECT inRect)

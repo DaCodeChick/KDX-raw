@@ -3,7 +3,10 @@ set(SOURCES
 	UDateTime.cpp
 	UError.cpp
 	UKeyboard.cpp
+	UMath.cpp
 	UMemory.cpp
+	UMouse.cpp
+	USound.cpp
 	UText.cpp
 )
 
@@ -13,7 +16,10 @@ set(HEADERS
 	UDateTime.h
 	UError.h
 	UKeyboard.h
+	UMath.h
+	UMouse.h
 	UMemory.h
+	USound.h
 	UText.h
 )
 

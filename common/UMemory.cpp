@@ -35,60 +35,60 @@ void UMemory::Clear(void *outDest, uint inSize)
 					while (true)
 					{
 						uVar2 = inSize;
-						if (((ulong)outDest & 0x1f) == 0)
+						if (((ulonglong)outDest & 0x1f) == 0)
 						{
 							uVar2 = inSize & 0x3f;
 							for (uVar1 = inSize >> 6; uVar1 != 0; uVar1 = uVar1 - 1)
 							{
 								*(undefined8 *)outDest = 0;
-								*(undefined8 *)((long)outDest + 8) = 0;
-								*(undefined8 *)((long)outDest + 0x10) = 0;
-								*(undefined8 *)((long)outDest + 0x18) = 0;
-								*(undefined8 *)((long)outDest + 0x20) = 0;
-								*(undefined8 *)((long)outDest + 0x28) = 0;
-								*(undefined8 *)((long)outDest + 0x30) = 0;
-								*(undefined8 *)((long)outDest + 0x38) = 0;
-								outDest = (void *)((long)outDest + 0x40);
+								*(undefined8 *)((ulonglong)outDest + 8) = 0;
+								*(undefined8 *)((ulonglong)outDest + 0x10) = 0;
+								*(undefined8 *)((ulonglong)outDest + 0x18) = 0;
+								*(undefined8 *)((ulonglong)outDest + 0x20) = 0;
+								*(undefined8 *)((ulonglong)outDest + 0x28) = 0;
+								*(undefined8 *)((ulonglong)outDest + 0x30) = 0;
+								*(undefined8 *)((ulonglong)outDest + 0x38) = 0;
+								outDest = (void *)((ulonglong)outDest + 0x40);
 							}
 							if (0x1f < uVar2)
 							{
 								*(undefined8 *)outDest = 0;
-								*(undefined8 *)((long)outDest + 8) = 0;
-								*(undefined8 *)((long)outDest + 0x10) = 0;
-								*(undefined8 *)((long)outDest + 0x18) = 0;
-								outDest = (void *)((long)outDest + 0x20);
+								*(undefined8 *)((ulonglong)outDest + 8) = 0;
+								*(undefined8 *)((ulonglong)outDest + 0x10) = 0;
+								*(undefined8 *)((ulonglong)outDest + 0x18) = 0;
+								outDest = (void *)((ulonglong)outDest + 0x20);
 								uVar2 = uVar2 - 0x20;
 							}
 						}
-						if ((((ulong)outDest & 0xf) != 0) || (uVar2 < 0x10))
+						if ((((ulonglong)outDest & 0xf) != 0) || (uVar2 < 0x10))
 							break;
 						*(undefined8 *)outDest = 0;
-						*(undefined8 *)((long)outDest + 8) = 0;
-						outDest = (void *)((long)outDest + 0x10);
+						*(undefined8 *)((ulonglong)outDest + 8) = 0;
+						outDest = (void *)((ulonglong)outDest + 0x10);
 						inSize = uVar2 - 0x10;
 					}
-					if ((((ulong)outDest & 7) != 0) || (uVar2 < 8))
+					if ((((ulonglong)outDest & 7) != 0) || (uVar2 < 8))
 						break;
 					*(undefined8 *)outDest = 0;
-					outDest = (void *)((long)outDest + 8);
+					outDest = (void *)((ulonglong)outDest + 8);
 					inSize = uVar2 - 8;
 				}
-				if ((((ulong)outDest & 3) != 0) || (uVar2 < 4))
+				if ((((ulonglong)outDest & 3) != 0) || (uVar2 < 4))
 					break;
 				*(undefined4 *)outDest = 0;
-				outDest = (void *)((long)outDest + 4);
+				outDest = (void *)((ulonglong)outDest + 4);
 				inSize = uVar2 - 4;
 			}
-			if ((((ulong)outDest & 1) != 0) || (uVar2 < 2))
+			if ((((ulonglong)outDest & 1) != 0) || (uVar2 < 2))
 				break;
 			*(undefined2 *)outDest = 0;
-			outDest = (void *)((long)outDest + 2);
+			outDest = (void *)((ulonglong)outDest + 2);
 			inSize = uVar2 - 2;
 		}
 		if (uVar2 == 0)
 			break;
 		*(undefined1 *)outDest = 0;
-		outDest = (void *)((int)outDest + 1);
+		outDest = (void *)((ulonglong)outDest + 1);
 		inSize = uVar2 - 1;
 	}
 	return;
@@ -129,12 +129,12 @@ uint UMemory::Move(void *outDest, const void *inSrc, uint inSize)
 
 	if (inSrc < outDest)
 	{
-		puVar4 = (undefined1 *)((long)inSrc + (inSize - 1));
-		puVar6 = (undefined1 *)((long)outDest + (inSize - 1));
+		puVar4 = (undefined1 *)((ulonglong)inSrc + (inSize - 1));
+		puVar6 = (undefined1 *)((ulonglong)outDest + (inSize - 1));
 		uVar2 = inSize;
-		if (0xf < (long)inSize)
+		if (0xf < (int)inSize)
 		{
-			uVar2 = (ulong)(puVar6 + -3) & 3;
+			uVar2 = (ulonglong)(puVar6 + -3) & 3;
 			uVar1 = inSize;
 			if (uVar2 != 0)
 			{
@@ -159,8 +159,8 @@ uint UMemory::Move(void *outDest, const void *inSrc, uint inSize)
 			{
 				return inSize;
 			}
-			puVar4 = (undefined1 *)((long)puVar3 + 3);
-			puVar6 = (undefined1 *)((long)puVar5 + 3);
+			puVar4 = (undefined1 *)((ulonglong)puVar3 + 3);
+			puVar6 = (undefined1 *)((ulonglong)puVar5 + 3);
 		}
 		for (; uVar2 != 0; uVar2 = uVar2 - 1)
 		{
@@ -172,9 +172,9 @@ uint UMemory::Move(void *outDest, const void *inSrc, uint inSize)
 	else
 	{
 		uVar2 = inSize;
-		if (0xf < (long)inSize)
+		if (0xf < (int)inSize)
 		{
-			uVar2 = -(long)outDest & 7;
+			uVar2 = -(ulonglong)outDest & 7;
 			uVar1 = inSize;
 			if (uVar2 != 0)
 			{
@@ -182,16 +182,16 @@ uint UMemory::Move(void *outDest, const void *inSrc, uint inSize)
 				for (; uVar2 != 0; uVar2 = uVar2 - 1)
 				{
 					*(undefined1 *)outDest = *(byte *)inSrc;
-					inSrc = (undefined4 *)((long)inSrc + 1);
-					outDest = (undefined4 *)((long)outDest + 1);
+					inSrc = (undefined4 *)((ulonglong)inSrc + 1);
+					outDest = (undefined4 *)((ulonglong)outDest + 1);
 				}
 			}
 			uVar2 = uVar1 & 7;
 			for (uVar1 = uVar1 >> 2; uVar1 != 0; uVar1 = uVar1 - 1)
 			{
 				*(undefined4 *)outDest = *(byte *)inSrc;
-				inSrc = (undefined4 *)((long)inSrc + 4);
-				outDest = (undefined4 *)((long)outDest + 4);
+				inSrc = (undefined4 *)((ulonglong)inSrc + 4);
+				outDest = (undefined4 *)((ulonglong)outDest + 4);
 			}
 			if (uVar2 == 0)
 			{
@@ -201,8 +201,8 @@ uint UMemory::Move(void *outDest, const void *inSrc, uint inSize)
 		for (; uVar2 != 0; uVar2 = uVar2 - 1)
 		{
 			*(undefined1 *)outDest = *(byte *)inSrc;
-			inSrc = (undefined4 *)((long)inSrc + 1);
-			outDest = (undefined4 *)((long)outDest + 1);
+			inSrc = (undefined4 *)((ulonglong)inSrc + 1);
+			outDest = (undefined4 *)((ulonglong)outDest + 1);
 		}
 	}
 	return inSize;
