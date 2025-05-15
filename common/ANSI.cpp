@@ -200,3 +200,41 @@ uint pstrncpy(byte *dst, byte *src, uint len)
 	}
 	return uVar1;
 }
+
+// AppearanceEdit.exe: 0044d2f0
+char *strrev(char *_Str)
+{
+	char cVar1;
+	int iVar2;
+	int iVar3;
+	char *pcVar4;
+
+	if (_Str == NULL)
+	{
+		return NULL;
+	}
+	iVar3 = 0;
+	iVar2 = -1;
+	pcVar4 = _Str;
+	do
+	{
+		if (iVar2 == 0)
+			break;
+		iVar2 = iVar2 + -1;
+		cVar1 = *pcVar4;
+		pcVar4 = pcVar4 + 1;
+	} while (cVar1 != '\0');
+	iVar2 = -3 - iVar2;
+	if (0 < iVar2)
+	{
+		do
+		{
+			cVar1 = _Str[iVar3];
+			_Str[iVar3] = _Str[iVar2];
+			_Str[iVar2] = cVar1;
+			iVar3 = iVar3 + 1;
+			iVar2 = iVar2 + -1;
+		} while (iVar3 < iVar2);
+	}
+	return _Str;
+}
