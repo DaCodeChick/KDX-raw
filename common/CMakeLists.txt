@@ -1,7 +1,9 @@
 set(SOURCES
+	ANSI.cpp
 	GrafTypes.cpp
 	UDateTime.cpp
 	UError.cpp
+	UGraphics.cpp
 	UKeyboard.cpp
 	UMath.cpp
 	UMemory.cpp
@@ -11,10 +13,12 @@ set(SOURCES
 )
 
 set(HEADERS
+	ANSI.h
 	GrafTypes.h
 	typedefs.h
 	UDateTime.h
 	UError.h
+	UGraphics.h
 	UKeyboard.h
 	UMath.h
 	UMouse.h
