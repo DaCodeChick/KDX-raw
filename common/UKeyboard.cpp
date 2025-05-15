@@ -2,6 +2,7 @@
 #include "UMemory.h"
 #include "UText.h"
 
+// AppearanceEdit.exe: 00461150
 static const byte _gKCToWin[0x100] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x60, 0x61, 0x62, 0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x0c, 0x00, 0x6f, 0x6a, 0x6d, 0xbb,
@@ -20,64 +21,76 @@ static const byte _gKCToWin[0x100] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
-
-uint UKeyboard::KeyToChar(ushort inKeyCode,uint inMods)
+// AppearanceEdit.exe: 004308b0
+uint UKeyboard::KeyToChar(ushort inKeyCode, uint inMods)
 {
-  int iVar1;
-  uint uVar2;
-  uint uVar3;
-  WCHAR local_11c;
-  ushort local_11a;
-  BYTE local_10c [16];
-  undefined1 local_fc;
-  undefined1 local_fb;
-  undefined1 local_fa;
-  undefined1 local_f8;
-  undefined1 local_b1;
-  
-  uVar2 = (uint)_gKCToWin[inKeyCode];
-  if (inMods == 0) {
-    uVar2 = MapVirtualKeyW(uVar2,2);
-    if ((uVar2 & 0x80000000) != 0) {
-      uVar2 = 0;
-    }
-    uVar2 = UText::ToLower(uVar2);
-    return uVar2;
-  }
-  if (inMods == 8) {
-    uVar2 = MapVirtualKeyW(uVar2,2);
-    if ((uVar2 & 0x80000000) != 0) {
-      uVar2 = 0;
-    }
-    uVar2 = UText::ToUpper(uVar2);
-    return uVar2;
-  }
-  UMemory::Clear(local_10c,0x100);
-  if ((inMods & 0x21) != 0) {
-    local_fb = 0x80;
-  }
-  if ((inMods & 2) != 0) {
-    local_fa = 0x80;
-  }
-  if ((inMods & 8) != 0) {
-    local_fc = 0x80;
-  }
-  if ((inMods & 4) != 0) {
-    local_f8 = 0x80;
-  }
-  if ((inMods & 0x10) != 0) {
-    local_b1 = 0x80;
-  }
-  uVar3 = 0;
-  iVar1 = ToUnicode(uVar2,0,local_10c,&local_11c,7,0);
-  if (0 < iVar1) {
-    if (((iVar1 == 2) && ((int)(uint)(ushort)local_11c >> 10 == 0x36)) &&
-       ((int)(uint)local_11a >> 10 == 0x37)) {
-      uVar3 = (((ushort)local_11c & 0x3ff) << 10 | local_11a & 0x3ff) + 0x10000;
-    }
-    else {
-      uVar3 = (uint)(ushort)local_11c;
-    }
-  }
-  return uVar3;
+	int iVar1;
+	uint uVar2;
+	uint uVar3;
+	WCHAR local_11c;
+	ushort local_11a;
+	BYTE local_10c[16];
+	undefined1 local_fc;
+	undefined1 local_fb;
+	undefined1 local_fa;
+	undefined1 local_f8;
+	undefined1 local_b1;
+
+	uVar2 = (uint)_gKCToWin[inKeyCode];
+	if (inMods == 0)
+	{
+		uVar2 = MapVirtualKeyW(uVar2, 2);
+		if ((uVar2 & 0x80000000) != 0)
+		{
+			uVar2 = 0;
+		}
+		uVar2 = UText::ToLower(uVar2);
+		return uVar2;
+	}
+	if (inMods == 8)
+	{
+		uVar2 = MapVirtualKeyW(uVar2, 2);
+		if ((uVar2 & 0x80000000) != 0)
+		{
+			uVar2 = 0;
+		}
+		uVar2 = UText::ToUpper(uVar2);
+		return uVar2;
+	}
+	UMemory::Clear(local_10c, 0x100);
+	if ((inMods & 0x21) != 0)
+	{
+		local_fb = 0x80;
+	}
+	if ((inMods & 2) != 0)
+	{
+		local_fa = 0x80;
+	}
+	if ((inMods & 8) != 0)
+	{
+		local_fc = 0x80;
+	}
+	if ((inMods & 4) != 0)
+	{
+		local_f8 = 0x80;
+	}
+	if ((inMods & 0x10) != 0)
+	{
+		local_b1 = 0x80;
+	}
+	uVar3 = 0;
+	iVar1 = ToUnicode(uVar2, 0, local_10c, &local_11c, 7, 0);
+	if (0 < iVar1)
+	{
+		if (((iVar1 == 2) && ((int)(uint)(ushort)local_11c >> 10 == 0x36)) &&
+		    ((int)(uint)local_11a >> 10 == 0x37))
+		{
+			uVar3 = (((ushort)local_11c & 0x3ff) << 10 | local_11a & 0x3ff) + 0x10000;
+		}
+		else
+		{
+			uVar3 = (uint)(ushort)local_11c;
+		}
+	}
+	return uVar3;
 }

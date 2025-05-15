@@ -1,5 +1,10 @@
 #include "UError.h"
 
+// AppearanceEdit.exe: 00424ae0
+// KDXClient.exe: 004716c0
+// KDXClient.lexe: 080a9b44
+// KDXServer.app: 10030510
+// KDXServer.command: 00033628
 void __Fail(uint inID)
 {
 	SError err;

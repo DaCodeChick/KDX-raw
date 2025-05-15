@@ -1,5 +1,7 @@
 #include "GrafTypes.h"
 
+// AppearanceEdit.exe: 00439d90
+// KDXClient.exe: 004a33e0
 void SRect::Constrain(const LPRECT inRect)
 {
 	int iVar1;
@@ -44,6 +46,9 @@ void SRect::Constrain(const LPRECT inRect)
 	return;
 }
 
+// AppearanceEdit.app: 1000f070
+// AppearanceEdit.exe: 00439c30
+// KDXClient.exe: 004a3280
 bool SRect::GetIntersection(LPRECT inRectA, LPRECT inRectB)
 {
 	int iVar1;
@@ -86,6 +91,8 @@ bool SRect::GetIntersection(LPRECT inRectA, LPRECT inRectB)
 	return false;
 }
 
+// AppearanceEdit.exe: 00439cb0
+// KDXClient.exe: 004a3300
 bool __cdecl SRect::GetUnion(const LPRECT inRectA, const LPRECT inRectB)
 {
 	int iVar1;
