@@ -12,3 +12,4 @@ struct SError
 };
 
 EXPORT void __Fail(uint inID);
+EXPORT uint _OSToGenError(int inError);

@@ -35,6 +35,12 @@ double UMath::NormalizeAngle(double x)
 	return x;
 }
 
+// AppearanceEdit.exe: 0044db30
+double UMath::Pi()
+{
+	return gm_Pi;
+}
+
 // AppearanceEdit.exe: 0044dad0
 double UMath::Sine(double x)
 {
