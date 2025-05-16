@@ -21,7 +21,7 @@ int UDateTime::GetTimeZoneOffset(void)
 	_TIME_ZONE_INFORMATION local_b0;
 
 	DVar1 = GetTimeZoneInformation(&local_b0);
-	if (DVar1 == 2)
+	if (DVar1 == TIME_ZONE_ID_DAYLIGHT)
 	{
 		local_b0.Bias = local_b0.Bias + local_b0.DaylightBias;
 	}
