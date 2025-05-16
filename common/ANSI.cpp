@@ -2,6 +2,7 @@
 
 // AppearanceEdit.app: 100093f0
 // AppearanceEdit.exe: 00430b70
+// KDXClient.exe: 00467d70
 // KDXServer.exe: 00428a30
 uint pstrcat(byte *dst, byte *src)
 {
@@ -120,6 +121,7 @@ bool __cdecl pstrcmp(byte *str1, byte *str2)
 }
 
 // AppearanceEdit.exe: 00430a00
+// KDXClient.exe: 00467c00
 uint pstrcpy(byte *dst, byte *src)
 
 {
@@ -166,6 +168,7 @@ uint pstrcpy(byte *dst, byte *src)
 }
 
 // AppearanceEdit.exe: 00430c60
+// KDXClient.exe: 00467e60
 uint pstrncat(byte *dst, byte *src, uint len)
 {
 	uint uVar1;
@@ -221,6 +224,7 @@ uint pstrncat(byte *dst, byte *src, uint len)
 }
 
 // AppearanceEdit.exe: 00430ab0
+// KDXClien.exe: 00467cb0
 uint pstrncpy(byte *dst, byte *src, uint len)
 {
 	uint uVar1;

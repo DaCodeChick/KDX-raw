@@ -12,9 +12,11 @@ set(SOURCES
 	UMath.cpp
 	UMemory.cpp
 	UMouse.cpp
+	URegularTransport.cpp
 	USound.cpp
 	UText.cpp
 	UTimer.cpp
+	UWindow.cpp
 )
 
 set(HEADERS
@@ -33,9 +35,11 @@ set(HEADERS
 	UMath.h
 	UMouse.h
 	UMemory.h
+	URegularTransport.h
 	USound.h
 	UText.h
 	UTimer.h
+	UWindow.h
 )
 
 add_library(
