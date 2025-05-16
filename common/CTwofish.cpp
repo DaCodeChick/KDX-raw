@@ -575,7 +575,6 @@ CTwofish::CTwofish(const void *inData)
 		iVar5 = iVar5 + 2;
 		iVar3 = iVar3 + 2;
 	} while (iVar6 < 0x100);
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x67]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -613,7 +612,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[1] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xe8]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -651,7 +649,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[2] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[3] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xfd]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -689,7 +686,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[4] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[5] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x76]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -727,7 +723,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[6] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[7] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x92]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -765,7 +760,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[8] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[9] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x78]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -803,7 +797,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[10] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0xb] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xdd]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -841,7 +834,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0xc] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0xd] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x38]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -879,7 +871,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0xe] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0xf] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xc6]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -917,7 +908,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x10] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x11] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x98]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -955,7 +945,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x12] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x13] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xf7]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -993,7 +982,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x14] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x15] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x6c]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -1031,7 +1019,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x16] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x17] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x75]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -1069,7 +1056,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x18] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x19] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x26]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -1107,7 +1093,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x1a] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x1b] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x13]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -1145,7 +1130,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x1c] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x1d] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x48]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -1183,7 +1167,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x1e] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x1f] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xd0]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -1221,7 +1204,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x20] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x21] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x30]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -1259,7 +1241,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x22] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x23] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x54]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -1297,7 +1278,6 @@ CTwofish::CTwofish(const void *inData)
 	mKey[0x24] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x25] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	/* WARNING: Load size is inaccurate */
 	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
 	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x23]] ^
 	                         *(byte *)((ulonglong)inData + 0xd)] ^
@@ -1352,7 +1332,6 @@ void CTwofish::Encrypt(const void *inData, void *outData)
 	undefined1 local_18;
 	undefined1 local_14;
 
-	/* WARNING: Load size is inaccurate */
 	uVar1 = *(byte *)inData ^ mKey[0];
 	uVar7 = *(uint *)((ulonglong)inData + 4) ^ mKey[1];
 	uVar2 = *(uint *)((ulonglong)inData + 0xc) ^ mKey[3];
