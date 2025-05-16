@@ -108,7 +108,7 @@ bool SRect::GetIntersection(LPRECT inRectA, LPRECT inRectB)
 
 // AppearanceEdit.exe: 00439cb0
 // KDXClient.exe: 004a3300
-bool __cdecl SRect::GetUnion(const LPRECT inRectA, const LPRECT inRectB)
+bool SRect::GetUnion(const LPRECT inRectA, const LPRECT inRectB)
 {
 	int iVar1;
 	int iVar2;
