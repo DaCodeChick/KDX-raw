@@ -1,6 +1,7 @@
 #include "ANSI.h"
 
 // AppearanceEdit.exe: 00430b70
+// KDXServer.exe: 00428a30
 uint pstrcat(byte *dst, byte *src)
 {
 	uint uVar1;
@@ -49,6 +50,71 @@ uint pstrcat(byte *dst, byte *src)
 		}
 	}
 	return local_c;
+}
+
+// KDXServer.exe: 00428e20
+byte *pstrchr(byte *str, byte chr)
+{
+	uint uVar1;
+
+	if (str == NULL)
+	{
+		return str;
+	}
+	uVar1 = 0;
+	if (*str != 0)
+	{
+		do
+		{
+			if (chr == str[uVar1 + 1])
+			{
+				return str + uVar1 + 1;
+			}
+			uVar1 = uVar1 + 1;
+		} while (uVar1 < *str);
+	}
+	return NULL;
+}
+
+// KDXServer.exe: 00428d80
+bool __cdecl pstrcmp(byte *str1, byte *str2)
+{
+	uint uVar1;
+	uint uVar2;
+
+	if (str1 == NULL)
+	{
+		uVar1 = 0;
+	}
+	else
+	{
+		uVar1 = (uint)*str1;
+	}
+	if (str2 == NULL)
+	{
+		uVar2 = 0;
+	}
+	else
+	{
+		uVar2 = (uint)*str2;
+	}
+	if (uVar1 == uVar2)
+	{
+		uVar2 = 1;
+		if (uVar1 != 0)
+		{
+			do
+			{
+				if (str1[uVar2] != str2[uVar2])
+				{
+					return false;
+				}
+				uVar2 = uVar2 + 1;
+			} while (uVar2 <= uVar1);
+		}
+		return true;
+	}
+	return false;
 }
 
 // AppearanceEdit.exe: 00430a00
@@ -199,6 +265,29 @@ uint pstrncpy(byte *dst, byte *src, uint len)
 		}
 	}
 	return uVar1;
+}
+
+// KDXServer.exe: 00428e60
+byte *pstrrchr(byte *str, byte chr)
+{
+	byte *pbVar1;
+	byte *pbVar2;
+
+	if (str == NULL)
+	{
+		return str;
+	}
+	pbVar2 = str + *str;
+	do
+	{
+		pbVar1 = pbVar2;
+		if (pbVar1 <= str)
+		{
+			return NULL;
+		}
+		pbVar2 = pbVar1 + -1;
+	} while (*pbVar1 != chr);
+	return pbVar1;
 }
 
 // AppearanceEdit.exe: 0044d2f0

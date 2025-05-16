@@ -556,8 +556,8 @@ CTwofish::CTwofish(const void *inData)
 	do
 	{
 		mSBox[0][iVar6] =
-		    MDS_GF_FB[MDS[0]
-		                 [MDS[0][MDS[1][*(byte *)((ulonglong)P + iVar3) ^ bVar1] ^ local_5a] ^ local_56] ^
+		    MDS_GF_FB[MDS[0][MDS[0][MDS[1][*(byte *)((ulonglong)P + iVar3) ^ bVar1] ^ local_5a] ^
+		                     local_56] ^
 		              local_52];
 		mSBox[1][iVar6] =
 		    MDS_GF_FD[MDS[0][MDS[1][MDS[1][*(byte *)((ulonglong)P + iVar5) ^ local_57] ^ local_59] ^
