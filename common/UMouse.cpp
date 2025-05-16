@@ -1,10 +1,10 @@
 #include "UMouse.h"
 
 // AppearanceEdit.exe: 0046035c
-static uint _gCurCursorID = 0;
+static uint gCurCursorID = 0;
 
 // AppearanceEdit.exe: 0047a084
-static HCURSOR _gCursors[17] = {NULL};
+static HCURSOR gCursors[17] = {NULL};
 
 // AppearanceEdit.exe: 00416530
 uint UMouse::GetDoubleClickTime(void)
@@ -18,7 +18,7 @@ uint UMouse::GetDoubleClickTime(void)
 // AppearanceEdit.exe: 00416530
 uint UMouse::GetImage(void)
 {
-	return _gCurCursorID;
+	return gCurCursorID;
 }
 
 // AppearanceEdit.exe: 00416540
@@ -33,36 +33,36 @@ void __cdecl UMouse::SetImage(uint inID)
 {
 	HCURSOR hCursor;
 
-	if (_gCursors[0] == NULL)
+	if (gCursors[0] == NULL)
 	{
-		_gCursors[0] = LoadCursorW(NULL, (LPCWSTR)IDC_ARROW);
-		_gCursors[1] = _gCursors[0];
-		_gCursors[2] = LoadCursorW(NULL, (LPCWSTR)IDC_IBEAM);
-		_gCursors[3] = LoadCursorW(NULL, (LPCWSTR)IDC_CROSS);
-		_gCursors[4] = _gCursors[3];
-		_gCursors[5] = LoadCursorW(NULL, (LPCWSTR)IDC_WAIT);
-		_gCursors[6] = LoadCursorW(NULL, (LPCWSTR)IDC_NO);
-		_gCursors[7] = LoadCursorW(NULL, (LPCWSTR)IDC_SIZE);
-		_gCursors[8] = LoadCursorW(NULL, (LPCWSTR)IDC_SIZEWE);
-		_gCursors[9] = LoadCursorW(NULL, (LPCWSTR)IDC_SIZENS);
-		_gCursors[10] = LoadCursorW(NULL, (LPCWSTR)IDC_SIZENWSE);
-		_gCursors[0xb] = LoadCursorW(NULL, (LPCWSTR)IDC_SIZENESW);
-		_gCursors[0xc] = _gCursors[1];
-		_gCursors[0xd] = _gCursors[1];
-		_gCursors[0xe] = _gCursors[1];
-		_gCursors[0xf] = _gCursors[1];
-		_gCursors[0x10] = _gCursors[1];
+		gCursors[0] = LoadCursorW(NULL, (LPCWSTR)IDC_ARROW);
+		gCursors[1] = gCursors[0];
+		gCursors[2] = LoadCursorW(NULL, (LPCWSTR)IDC_IBEAM);
+		gCursors[3] = LoadCursorW(NULL, (LPCWSTR)IDC_CROSS);
+		gCursors[4] = gCursors[3];
+		gCursors[5] = LoadCursorW(NULL, (LPCWSTR)IDC_WAIT);
+		gCursors[6] = LoadCursorW(NULL, (LPCWSTR)IDC_NO);
+		gCursors[7] = LoadCursorW(NULL, (LPCWSTR)IDC_SIZE);
+		gCursors[8] = LoadCursorW(NULL, (LPCWSTR)IDC_SIZEWE);
+		gCursors[9] = LoadCursorW(NULL, (LPCWSTR)IDC_SIZENS);
+		gCursors[10] = LoadCursorW(NULL, (LPCWSTR)IDC_SIZENWSE);
+		gCursors[0xb] = LoadCursorW(NULL, (LPCWSTR)IDC_SIZENESW);
+		gCursors[0xc] = gCursors[1];
+		gCursors[0xd] = gCursors[1];
+		gCursors[0xe] = gCursors[1];
+		gCursors[0xf] = gCursors[1];
+		gCursors[0x10] = gCursors[1];
 	}
 	if (0x11 < inID)
 	{
 		inID = 1;
 	}
-	hCursor = _gCursors[inID];
-	if (_gCursors[inID] == NULL)
+	hCursor = gCursors[inID];
+	if (gCursors[inID] == NULL)
 	{
-		hCursor = _gCursors[1];
+		hCursor = gCursors[1];
 	}
 	SetCursor(hCursor);
-	_gCurCursorID = inID;
+	gCurCursorID = inID;
 	return;
 }
