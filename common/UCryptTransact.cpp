@@ -90,6 +90,17 @@ void UCryptTransact::GenerateKey(const void *inData, uint inDataSize, void *outD
 	return;
 }
 
+// KDXServer.exe: 00442140
+bool UCryptTransact::IsDefaultKey(const void *inData)
+{
+	bool bVar1;
+	undefined1 local_24[32];
+
+	GenerateKey(0, 0, local_24);
+	bVar1 = UMemory::Compare(local_24, inData, 0x20);
+	return bVar1;
+}
+
 // KDXServer.exe: 00430b40
 void UCryptTransact::TCPPacketCrypt(uint inInit, void *ioData, uint inDataSize)
 {
