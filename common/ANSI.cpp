@@ -1,5 +1,6 @@
 #include "ANSI.h"
 
+// AppearanceEdit.app: 100093f0
 // AppearanceEdit.exe: 00430b70
 // KDXServer.exe: 00428a30
 uint pstrcat(byte *dst, byte *src)
@@ -76,6 +77,7 @@ byte *pstrchr(byte *str, byte chr)
 	return NULL;
 }
 
+// AppearanceEdit.app 10009780
 // KDXServer.exe: 00428d80
 bool __cdecl pstrcmp(byte *str1, byte *str2)
 {

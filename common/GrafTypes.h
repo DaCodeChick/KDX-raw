@@ -15,5 +15,6 @@ struct EXPORT SRect
 // AppearanceEdit.exe: 00475328
 static double gm_2Pi = 6.283185307179586;
 
+// AppearanceEdit.app: 10076cf8
 // AppearanceEdit.exe: 00475340
 static double gm_Pi = 3.141592653589793;

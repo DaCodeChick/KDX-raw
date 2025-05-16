@@ -36,6 +36,7 @@ double UMath::Cosine(double x)
 	return std::cos(NormalizeAngle(x));
 }
 
+// AppearanceEdit.app: 1005e3a0
 // AppearanceEdit.exe: 00445950
 ulonglong UMath::Div64U(ulonglong inNumerator, ulonglong inDenominator)
 {
@@ -73,6 +74,7 @@ double UMath::NormalizeAngle(double x)
 	return x;
 }
 
+// AppearanceEdit.app: 1001d620
 // AppearanceEdit.exe: 0044db30
 double UMath::Pi()
 {
