@@ -12,12 +12,14 @@ set(SOURCES
 	UMouse.cpp
 	USound.cpp
 	UText.cpp
+	UTimer.cpp
 )
 
 set(HEADERS
 	ANSI.h
 	CPtrList.h
 	GrafTypes.h
+	MoreTypes.h
 	typedefs.h
 	UDateTime.h
 	UDigest.h
@@ -29,6 +31,7 @@ set(HEADERS
 	UMemory.h
 	USound.h
 	UText.h
+	UTimer.h
 )
 
 add_library(
