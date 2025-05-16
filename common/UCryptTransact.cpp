@@ -2,66 +2,6 @@
 #include "UDigest.h"
 #include "UMemory.h"
 
-// KDXClient.exe: 0046cdb0
-void UCryptTransact::BlockCrypt1B20E200(void *ioData, bool inIsDecrypt)
-{
-	uint uVar1;
-	uint uVar2;
-	uint uVar3;
-	uint uVar4;
-	uint uVar5;
-	uint uVar6;
-	uint uVar7;
-	uint uVar8;
-
-	uVar8 = *(uint *)ioData;
-	uVar6 = *(uint *)((ulonglong)ioData + 4);
-	uVar5 = (uVar8 & 0xff00) << 8 | uVar8 >> 0x18 | uVar8 >> 8 & 0xff00 | uVar8 << 0x18;
-	uVar1 = *(uint *)((ulonglong)ioData + 8);
-	uVar2 = (uVar6 & 0xff00) << 8 | uVar6 >> 0x18 | uVar6 >> 8 & 0xff00;
-	uVar3 = uVar2 | uVar6 << 0x18;
-	uVar7 = uVar1 >> 0x18;
-	uVar6 = *(uint *)((ulonglong)ioData + 0xc);
-	uVar1 = (uVar1 & 0xff00) << 8 | uVar7 | uVar1 >> 8 & 0xff00 | uVar1 << 0x18;
-	uVar4 = (uVar6 & 0xff00) << 8 | uVar6 >> 0x18 | uVar6 >> 8 & 0xff00 | uVar6 << 0x18;
-	if (inIsDecrypt)
-	{
-		uVar2 = (uVar3 >> 0x11 | uVar2 << 0xf) ^ 0x5f547a17;
-		uVar1 = (uVar1 >> 4 | uVar7 << 0x1c) ^ 0x69c83e35;
-		*(uint *)ioData =
-		    (uVar2 & 0xff00) << 8 | uVar2 >> 0x18 | uVar2 >> 8 & 0xff00 | uVar2 << 0x18;
-		*(uint *)((ulonglong)ioData + 4) =
-		    (uVar1 & 0xff00) << 8 | uVar1 >> 0x18 | uVar1 >> 8 & 0xff00 | uVar1 << 0x18;
-		uVar8 = (uVar8 << 0x18) >> 0x19 | uVar5 << 7;
-		uVar1 = uVar8 ^ 0x1b20e200;
-		*(uint *)((ulonglong)ioData + 8) =
-		    (uVar1 & 0xff00) << 8 | uVar1 >> 0x18 | uVar1 >> 8 & 0xff00 | uVar8 << 0x18;
-		uVar8 = ((uVar6 >> 0x18) << 0x1b | uVar4 >> 5) ^ 0x8022e8d1;
-		*(uint *)((ulonglong)ioData + 0xc) =
-		    (uVar8 & 0xff00) << 8 | uVar8 >> 0x18 | uVar8 >> 8 & 0xff00 | uVar8 << 0x18;
-	}
-	else
-	{
-		uVar8 = (uVar1 ^ 0x1b20e200) >> 7;
-		uVar5 = uVar5 ^ 0x5f547a17;
-		uVar1 = uVar5 >> 0xf;
-		uVar5 = uVar5 << 0x11;
-		*(uint *)ioData = (uVar8 & 0xff00) << 8 | (uVar7 << 0x19 | uVar8) >> 0x18 |
-		                  (uVar8 & 0xff0000) >> 8 | uVar8 << 0x18;
-		uVar3 = uVar3 ^ 0x69c83e35;
-		uVar8 = uVar3 << 4;
-		uVar4 = uVar4 ^ 0x8022e8d1;
-		uVar6 = uVar4 << 5;
-		*(uint *)((ulonglong)ioData + 4) =
-		    (uVar1 & 0xff00) << 8 | uVar5 >> 0x18 | (uVar5 | uVar1) >> 8 & 0xff00 | uVar1 << 0x18;
-		*(uint *)((ulonglong)ioData + 8) = (uVar8 & 0xff00) << 8 | uVar8 >> 0x18 |
-		                                   uVar8 >> 8 & 0xff00 | (uVar8 | uVar3 >> 0x1c) << 0x18;
-		*(uint *)((ulonglong)ioData + 0xc) = (uVar6 & 0xff00) << 8 | uVar6 >> 0x18 |
-		                                     uVar6 >> 8 & 0xff00 | (uVar4 >> 0x1b | uVar6) << 0x18;
-	}
-	return;
-}
-
 // KDXServer.exe: 00417a30
 void UCryptTransact::BlockCrypt6E7DFD34(void *ioData, bool inIsDecrypt)
 {
