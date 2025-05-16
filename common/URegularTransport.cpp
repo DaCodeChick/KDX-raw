@@ -33,8 +33,20 @@ struct SRegularTransport
 // KDXClient.exe: 00500200
 static bool gTRInitialized = false;
 
+#ifdef _WIN32
+// KDXClient.exe: 00500202
+static ATOM _TRSockClassAtom = 0;
+#endif // _WIN32
+
+// KDXClient.exe: 0046f540
+static void _Deinit()
+{
+	WSACleanup();
+	return;
+}
+
 // KDXClient.exe: 0046f6a0
-void __cdecl URegularTransport::ConfigureSocket(TSocket inSocket)
+void URegularTransport::ConfigureSocket(TSocket inSocket)
 {
 	char local_c[4];
 
