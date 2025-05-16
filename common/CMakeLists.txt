@@ -1,7 +1,9 @@
 set(SOURCES
 	ANSI.cpp
 	CPtrList.cpp
+	CTwofish.cpp
 	GrafTypes.cpp
+	UCryptTransact.cpp
 	UDateTime.cpp
 	UDigest.cpp
 	UError.cpp
@@ -18,9 +20,11 @@ set(SOURCES
 set(HEADERS
 	ANSI.h
 	CPtrList.h
+	CTwofish.h
 	GrafTypes.h
 	MoreTypes.h
 	typedefs.h
+	UCryptTransact.h
 	UDateTime.h
 	UDigest.h
 	UError.h
