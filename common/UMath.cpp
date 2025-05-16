@@ -44,6 +44,20 @@ ulonglong UMath::Div64U(ulonglong inNumerator, ulonglong inDenominator)
 	return inNumerator / inDenominator;
 }
 
+// KDXClient.exe: 00474fc0
+int UMath::GetRandom(uint *inInit, int inMin, int inMax)
+{
+	uint uVar1;
+
+	if (inMax < inMin)
+	{
+		return 0;
+	}
+	uVar1 = *inInit * 0x41c64e6d + 0x3039;
+	*inInit = uVar1;
+	return inMin + uVar1 % ((inMax - inMin) + 1U);
+}
+
 // KDXServer.exe: 00435380
 uint UMath::GetRandom(void)
 {
