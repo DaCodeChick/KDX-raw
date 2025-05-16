@@ -24,6 +24,7 @@ set(HEADERS
 	CPtrList.h
 	CTwofish.h
 	GrafTypes.h
+	KDXCommon.h
 	MoreTypes.h
 	typedefs.h
 	UCryptTransact.h

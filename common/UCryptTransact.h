@@ -2,6 +2,8 @@
 
 #include "typedefs.h"
 
+typedef void (*TCryptProc)(void *ioData, bool isDecrypt);
+
 class EXPORT UCryptTransact
 {
 public:
