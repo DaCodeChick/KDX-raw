@@ -651,7 +651,7 @@ void __cdecl _MD5::Update(const void *inData, uint inDataSize)
 			iVar1 = mBufferLength;
 			mBufferLength = mBufferLength + 1;
 			uVar2 = *(const uint *)inData;
-			inData = (void *)((int)inData + 1);
+			inData = (void *)((ulonglong)inData + 1);
 			mBuffer[iVar1] = (uchar)uVar2;
 			inDataSize = inDataSize - 1;
 		}

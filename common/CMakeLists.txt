@@ -1,5 +1,6 @@
 set(SOURCES
 	ANSI.cpp
+	CPtrList.cpp
 	GrafTypes.cpp
 	UDateTime.cpp
 	UDigest.cpp
@@ -15,6 +16,7 @@ set(SOURCES
 
 set(HEADERS
 	ANSI.h
+	CPtrList.h
 	GrafTypes.h
 	typedefs.h
 	UDateTime.h

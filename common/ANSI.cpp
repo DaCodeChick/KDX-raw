@@ -202,6 +202,7 @@ uint pstrncpy(byte *dst, byte *src, uint len)
 }
 
 // AppearanceEdit.exe: 0044d2f0
+#ifndef _WIN32
 char *strrev(char *_Str)
 {
 	char cVar1;
@@ -238,3 +239,4 @@ char *strrev(char *_Str)
 	}
 	return _Str;
 }
+#endif // _WIN32
