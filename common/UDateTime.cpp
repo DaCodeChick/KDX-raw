@@ -1,4 +1,41 @@
 #include "UDateTime.h"
+#include "UMath.h"
+
+#ifdef _WIN32
+// KDXClient.exe: 004fedd0
+static FILETIME gElapsed = {0};
+
+// KDXClient.exe: 004fedd8
+static FILETIME gLastRecorded = {0};
+#else
+#endif // _WIN32
+
+// KDXClient.exe: 00457dc0
+ulonglong UDateTime::GetElapsedTime(void)
+{
+	ulonglong uVar1;
+	_FILETIME local_18;
+
+	GetSystemTimeAsFileTime(&local_18);
+	if ((local_18.dwHighDateTime <= gLastRecorded.dwHighDateTime) &&
+	    ((local_18.dwHighDateTime != gLastRecorded.dwHighDateTime ||
+	      (local_18.dwLowDateTime <= gLastRecorded.dwLowDateTime))))
+	{
+		gLastRecorded.dwLowDateTime = local_18.dwLowDateTime;
+		gLastRecorded.dwHighDateTime = local_18.dwHighDateTime;
+		return CONCAT44(gElapsed.dwHighDateTime, gElapsed.dwLowDateTime);
+	}
+	uVar1 = UMath::Div64U(CONCAT44((local_18.dwHighDateTime - gLastRecorded.dwHighDateTime) -
+	                                   (uint)(local_18.dwLowDateTime < gLastRecorded.dwLowDateTime),
+	                               local_18.dwLowDateTime - gLastRecorded.dwLowDateTime),
+	                      10);
+	gLastRecorded.dwLowDateTime = local_18.dwLowDateTime;
+	gLastRecorded.dwHighDateTime = local_18.dwHighDateTime;
+	uVar1 = uVar1 + CONCAT44(gElapsed.dwHighDateTime, gElapsed.dwLowDateTime);
+	gElapsed.dwLowDateTime = (DWORD)uVar1;
+	gElapsed.dwHighDateTime = (DWORD)(uVar1 >> 0x20);
+	return uVar1;
+}
 
 // AppearanceEdit.app: 1004caf0
 // AppearanceEdit.exe: 00415710

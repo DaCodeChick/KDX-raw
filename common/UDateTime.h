@@ -17,6 +17,7 @@ struct SCalendarDate
 class EXPORT UDateTime
 {
 public:
+	static ulonglong GetElapsedTime();
 	static int GetMilliseconds();
 	static int GetTimeZoneOffset();
 };
