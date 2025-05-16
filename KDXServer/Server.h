@@ -21,3 +21,4 @@ private:
 };
 
 void AccountsDBCrypt(void *ioData, uint inDataSize);
+void UDPPacketCrypt(void *outData, const void *inData, uint inDataSize);
