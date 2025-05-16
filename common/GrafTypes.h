@@ -6,6 +6,7 @@ struct EXPORT SRect
 {
 	int left, right, top, bottom;
 
+	void CenterHoriz(const LPRECT inBase);
 	void Constrain(const LPRECT inRect);
 	bool GetIntersection(const LPRECT inRectA, const LPRECT inRectB);
 	bool GetUnion(const LPRECT inRectA, const LPRECT inRectB);

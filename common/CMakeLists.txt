@@ -2,6 +2,7 @@ set(SOURCES
 	ANSI.cpp
 	GrafTypes.cpp
 	UDateTime.cpp
+	UDigest.cpp
 	UError.cpp
 	UGraphics.cpp
 	UKeyboard.cpp
@@ -17,6 +18,7 @@ set(HEADERS
 	GrafTypes.h
 	typedefs.h
 	UDateTime.h
+	UDigest.h
 	UError.h
 	UGraphics.h
 	UKeyboard.h

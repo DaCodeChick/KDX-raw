@@ -1,5 +1,20 @@
 #include "GrafTypes.h"
 
+// KDXClient.exe: 0044b8c0
+void SRect::CenterHoriz(const LPRECT inBase)
+{
+	uint uVar1;
+	int iVar2;
+	int iVar3;
+
+	iVar3 = right - left;
+	uVar1 = (inBase->left + inBase->right) - iVar3;
+	iVar2 = (int)((uVar1 + 1) - (uint)(uVar1 < 0x80000000)) >> 1;
+	left = iVar2;
+	right = iVar2 + iVar3;
+	return;
+}
+
 // AppearanceEdit.exe: 00439d90
 // KDXClient.exe: 004a33e0
 void SRect::Constrain(const LPRECT inRect)
