@@ -1,7 +1,7 @@
 #include "GrafTypes.h"
 
 // KDXClient.exe: 004a3500
-void SRect::Align(const LPRECT inSourceRect, uint inOptions, const LPRECT inRefRect)
+void SRect::Align(const SRect *inSourceRect, uint inOptions, const SRect *inRefRect)
 {
 	int iVar1;
 	int iVar2;
@@ -131,7 +131,7 @@ LAB_004a35bf:
 }
 
 // KDXClient.exe: 004a3480
-void SRect::Center(const LPRECT inBase, const LPRECT inContainer)
+void SRect::Center(const SRect *inBase, const SRect *inContainer)
 {
 	uint uVar1;
 	int iVar2;
@@ -151,7 +151,7 @@ void SRect::Center(const LPRECT inBase, const LPRECT inContainer)
 }
 
 // KDXClient.exe: 0044b8c0
-void SRect::CenterHoriz(const LPRECT inBase)
+void SRect::CenterHoriz(const SRect *inBase)
 {
 	uint uVar1;
 	int iVar2;
@@ -167,7 +167,7 @@ void SRect::CenterHoriz(const LPRECT inBase)
 
 // AppearanceEdit.exe: 00439d90
 // KDXClient.exe: 004a33e0
-void SRect::Constrain(const LPRECT inRect)
+void SRect::Constrain(const SRect *inRect)
 {
 	int iVar1;
 	int iVar2;
@@ -214,7 +214,7 @@ void SRect::Constrain(const LPRECT inRect)
 // AppearanceEdit.app: 1000f070
 // AppearanceEdit.exe: 00439c30
 // KDXClient.exe: 004a3280
-bool SRect::GetIntersection(LPRECT inRectA, LPRECT inRectB)
+bool SRect::GetIntersection(SRect *inRectA, SRect *inRectB)
 {
 	int iVar1;
 	int iVar2;
@@ -258,7 +258,7 @@ bool SRect::GetIntersection(LPRECT inRectA, LPRECT inRectB)
 
 // AppearanceEdit.exe: 00439cb0
 // KDXClient.exe: 004a3300
-bool SRect::GetUnion(const LPRECT inRectA, const LPRECT inRectB)
+bool SRect::GetUnion(const SRect *inRectA, const SRect *inRectB)
 {
 	int iVar1;
 	int iVar2;
@@ -328,7 +328,7 @@ bool SRect::GetUnion(const LPRECT inRectA, const LPRECT inRectB)
 }
 
 // KDXClient.exe: 004a3230
-bool SRect::Intersects(const LPRECT inRect) const
+bool SRect::Intersects(const SRect *inRect) const
 {
 	bool bVar1;
 	int iVar2;
@@ -366,7 +366,7 @@ bool SRect::Intersects(const LPRECT inRect) const
 }
 
 // KDXClient.exe: 004a3670
-void __cdecl SRect::MoveTo(const LPRECT inRect, int inLeft, int inTop)
+void __cdecl SRect::MoveTo(const SRect *inRect, int inLeft, int inTop)
 {
 	int iVar1;
 	int iVar2;

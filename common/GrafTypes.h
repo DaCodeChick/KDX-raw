@@ -6,15 +6,27 @@ struct EXPORT SRect
 {
 	int left, right, top, bottom;
 
-	void Align(const LPRECT inSourceRect, uint inOptions, const LPRECT inRefRect);
-	void Center(const LPRECT inBase, const LPRECT inContainer);
-	void CenterHoriz(const LPRECT inBase);
-	void Constrain(const LPRECT inRect);
-	bool GetIntersection(const LPRECT inRectA, const LPRECT inRectB);
-	bool GetUnion(const LPRECT inRectA, const LPRECT inRectB);
-	bool Intersects(const LPRECT inRect) const;
-	void MoveTo(const LPRECT inRect, int inLeft, int inTop);
+	void Align(const SRect *inSourceRect, uint inOptions, const SRect *inRefRect);
+	void Center(const SRect *inBase, const SRect *inContainer);
+	void CenterHoriz(const SRect *inBase);
+	void Constrain(const SRect *inRect);
+	bool GetIntersection(const SRect *inRectA, const SRect *inRectB);
+	bool GetUnion(const SRect *inRectA, const SRect *inRectB);
+	bool Intersects(const SRect *inRect) const;
+	void MoveTo(const SRect *inRect, int inLeft, int inTop);
 	void Validate();
+
+// tweak: Some inline QoL operator overloads for cross platform boilerplate
+#ifdef _WIN32
+	operator const LPRECT()
+	{
+		return (LPRECT)this;
+	}
+	operator LPRECT()
+	{
+		return (LPRECT)this;
+	}
+#endif // _WIN32
 };
 
 // AppearanceEdit.exe: 00475328
