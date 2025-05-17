@@ -50,8 +50,7 @@ public:
 class EXPORT StHandleLocker
 {
 public:
-	StHandleLocker(THdl inHdl, void *& outPtr):
-		mHdl(inHdl)
+	StHandleLocker(THdl inHdl, void *&outPtr) : mHdl(inHdl)
 	{
 		outPtr = UMemory::Lock(mHdl);
 	}
@@ -60,6 +59,7 @@ public:
 	{
 		UMemory::Unlock(mHdl);
 	}
+
 private:
 	THdl mHdl;
 };
@@ -68,15 +68,11 @@ private:
 class THdlObj
 {
 public:
-	THdlObj(uint inSize):
-		mHdl(std::malloc(inSize)),
-		mSize(inSize)
+	THdlObj(uint inSize) : mHdl(std::malloc(inSize)), mSize(inSize)
 	{
 	}
-	
-	THdlObj(const void *inData, uint inSize):
-		mHdl(std::malloc(inSize)),
-		mSize(inSize)
+
+	THdlObj(const void *inData, uint inSize) : mHdl(std::malloc(inSize)), mSize(inSize)
 	{
 		if (mHdl)
 			UMemory::Move(mHdl, inData, inSize);
@@ -91,6 +87,7 @@ public:
 	{
 		return mHdl;
 	}
+
 private:
 	void *mHdl;
 	uint mSize;

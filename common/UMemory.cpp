@@ -529,8 +529,8 @@ void UMemory::Dispose(THdl inHdl)
 #ifdef _WIN32
 	GlobalFree(inHdl);
 #else
-  // tweak: delete wrapper class
-  delete inHdl;
+	// tweak: delete wrapper class
+	delete inHdl;
 #endif
 	gHandleCount = gHandleCount - 1;
 	return;
@@ -907,7 +907,7 @@ THdl UMemory::NewHandle(const void *inData, uint inSize)
 	{
 		__Fail(0x20065);
 	}
-	//tweak: use the inlined lock/unlock functions
+	// tweak: use the inlined lock/unlock functions
 	void *pvVar2 = UMemory::Lock(pvVar1);
 	Move(pvVar2, inData, inSize);
 	UMemory::Unlock(pvVar1);
