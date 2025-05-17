@@ -4,6 +4,10 @@
 
 #include <cmath>
 
+#ifndef _WIN32
+#include <sys/time.h>
+#endif // _WIN32
+
 // KDXServer.exe: 00481198
 static uint gRandomSeed = 0;
 
@@ -20,13 +24,22 @@ double UMath::ArcTangent(double x)
 	return std::atan(x);
 }
 
+// KDXClient.lexe: 0810a4d8
 // KDXServer.exe: 0042f760
 uint UMath::CalcRandomSeed(void)
 {
+#ifdef _WIN32
 	_FILETIME local_c;
 
 	GetSystemTimeAsFileTime(&local_c);
 	return local_c.dwLowDateTime;
+#else
+	timeval local_14;
+	timezone local_c;
+
+	gettimeofday(&local_14, &local_c);
+	return local_14.tv_usec;
+#endif // _WIN32
 }
 
 // AppearanceEdit.exe: 0044daf0
@@ -58,6 +71,7 @@ int UMath::GetRandom(uint *inInit, int inMin, int inMax)
 	return inMin + uVar1 % ((inMax - inMin) + 1U);
 }
 
+// KDXClient.lexe: 080d9b38
 // KDXServer.exe: 00435380
 uint UMath::GetRandom(void)
 {

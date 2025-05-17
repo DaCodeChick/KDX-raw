@@ -22,9 +22,9 @@ uint UMouse::GetImage(void)
 }
 
 // AppearanceEdit.exe: 00416540
-void UMouse::GetLocation(LPPOINT outLoc)
+void UMouse::GetLocation(SPoint *outLoc)
 {
-	GetCursorPos(outLoc);
+	GetCursorPos((LPPOINT)outLoc);
 	return;
 }
 

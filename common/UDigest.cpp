@@ -1,6 +1,7 @@
 #include "UDigest.h"
 #include "UMemory.h"
 
+// KDXClient.lexe: 080de6a8
 // KDXServer.exe: 0045c850
 void UDigest::MD5_Encode(const void *inData, uint inDataSize, void *outDigest)
 {
@@ -12,6 +13,7 @@ void UDigest::MD5_Encode(const void *inData, uint inDataSize, void *outDigest)
 	return;
 }
 
+// KDXClient.lexe: 080c8100
 // KDXServer.exe: 00434270
 void _MD5::Clear(uint inSize)
 {
@@ -21,6 +23,7 @@ void _MD5::Clear(uint inSize)
 	return;
 }
 
+// KDXClient.lexe: 080de710
 // KDXServer.exe: 00434280
 void _MD5::Init()
 {
@@ -34,6 +37,7 @@ void _MD5::Init()
 	return;
 }
 
+// KDXClient.lexe: 080de844
 // KDXServer.exe: 0045c9a0
 void _MD5::Report(void *outDigest)
 {
@@ -170,6 +174,7 @@ void _MD5::Report(void *outDigest)
 	return;
 }
 
+// KDXClient.lexe: 080dea9c
 // KDXServer.exe: 0045a370
 void _MD5::Transform(const uint *inBlock)
 {
@@ -604,6 +609,7 @@ void _MD5::Transform(const uint *inBlock)
 	return;
 }
 
+// KDXClient.lexe: 080de748
 void __cdecl _MD5::Update(const void *inData, uint inDataSize)
 {
 	int iVar1;

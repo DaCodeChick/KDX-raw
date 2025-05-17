@@ -2,6 +2,11 @@
 
 #include "typedefs.h"
 
+struct EXPORT SPoint
+{
+	int x, y;
+};
+
 struct EXPORT SRect
 {
 	int left, right, top, bottom;
@@ -15,18 +20,6 @@ struct EXPORT SRect
 	bool Intersects(const SRect *inRect) const;
 	void MoveTo(const SRect *inRect, int inLeft, int inTop);
 	void Validate();
-
-// tweak: Some inline QoL operator overloads for cross platform boilerplate
-#ifdef _WIN32
-	operator const LPRECT()
-	{
-		return (LPRECT)this;
-	}
-	operator LPRECT()
-	{
-		return (LPRECT)this;
-	}
-#endif // _WIN32
 };
 
 // AppearanceEdit.exe: 00475328

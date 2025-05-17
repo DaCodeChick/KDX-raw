@@ -2,6 +2,7 @@
 #include "UError.h"
 
 #ifndef _WIN32
+#include <cstdlib>
 #include <cstring>
 #endif
 
@@ -11,8 +12,9 @@
 // KDXClient.lexe: 081a0c40
 // KDXServer.app: 1009d3ac
 // KDXServer.command: 000e4edc
-static uint gAllocationCount = 0;
+static uint gHandleCount = 0;
 
+// KDXClient.lexe: 08152020
 // KDXServer.exe: 004812c8
 static const uint ccitt32_crctab[256] = {
     0x00000000, 0x04C11DB7, 0x09823B6E, 0x0D4326D9, 0x130476DC, 0x17C56B6B, 0x1A864DB2, 0x1E475005,
@@ -48,7 +50,77 @@ static const uint ccitt32_crctab[256] = {
     0x89B8FD09, 0x8D79E0BE, 0x803AC667, 0x84FBDBD0, 0x9ABC8BD5, 0x9E7D9662, 0x933EB0BB, 0x97FFAD0C,
     0xAFB010B1, 0xAB710D06, 0xA6322BDF, 0xA2F33668, 0xBCB4666D, 0xB8757BDA, 0xB5365D03, 0xB1F740B4};
 
+// KDXClient.lexe: 080c6af4
+uint UMemory::AdlerSum(const void *inData, uint inDataSize, uint inInit)
+{
+	int iVar1;
+	int iVar2;
+	int iVar3;
+	int iVar4;
+	int iVar5;
+	int iVar6;
+	int iVar7;
+	int iVar8;
+	int iVar9;
+	int iVar10;
+	int iVar11;
+	int iVar12;
+	int iVar13;
+	int iVar14;
+	int iVar15;
+	uint uVar16;
+	uint uVar17;
+	uint uVar18;
+
+	uVar17 = inInit & 0xffff;
+	uVar16 = inInit >> 0x10;
+	if (inDataSize != 0)
+	{
+		do
+		{
+			uVar18 = inDataSize;
+			if (0x15b0 < inDataSize)
+			{
+				uVar18 = 0x15b0;
+			}
+			inDataSize = inDataSize - uVar18;
+			for (; 0xf < (int)uVar18; uVar18 = uVar18 - 0x10)
+			{
+				iVar1 = uVar17 + *(byte *)inData;
+				iVar2 = iVar1 + (uint) * (byte *)((ulonglong)inData + 1);
+				iVar3 = iVar2 + (uint) * (byte *)((ulonglong)inData + 2);
+				iVar4 = iVar3 + (uint) * (byte *)((ulonglong)inData + 3);
+				iVar5 = iVar4 + (uint) * (byte *)((ulonglong)inData + 4);
+				iVar6 = iVar5 + (uint) * (byte *)((ulonglong)inData + 5);
+				iVar7 = iVar6 + (uint) * (byte *)((ulonglong)inData + 6);
+				iVar8 = iVar7 + (uint) * (byte *)((ulonglong)inData + 7);
+				iVar9 = iVar8 + (uint) * (byte *)((ulonglong)inData + 8);
+				iVar10 = iVar9 + (uint) * (byte *)((ulonglong)inData + 9);
+				iVar11 = iVar10 + (uint) * (byte *)((ulonglong)inData + 10);
+				iVar12 = iVar11 + (uint) * (byte *)((ulonglong)inData + 0xb);
+				iVar13 = iVar12 + (uint) * (byte *)((ulonglong)inData + 0xc);
+				iVar14 = iVar13 + (uint) * (byte *)((ulonglong)inData + 0xd);
+				iVar15 = iVar14 + (uint) * (byte *)((ulonglong)inData + 0xe);
+				uVar17 = iVar15 + (uint) * (byte *)((ulonglong)inData + 0xf);
+				uVar16 = uVar16 + iVar1 + iVar2 + iVar3 + iVar4 + iVar5 + iVar6 + iVar7 + iVar8 +
+				         iVar9 + iVar10 + iVar11 + iVar12 + iVar13 + iVar14 + iVar15 + uVar17;
+				inData = (void *)((ulonglong)inData + 0x10);
+			}
+			for (; uVar18 != 0; uVar18 = uVar18 - 1)
+			{
+				uVar17 = uVar17 + *(byte *)inData;
+				inData = (void *)((ulonglong)inData + 1);
+				uVar16 = uVar16 + uVar17;
+			}
+			uVar17 = uVar17 % 0xfff1;
+			uVar16 = uVar16 % 0xfff1;
+		} while (inDataSize != 0);
+	}
+	return uVar16 << 0x10 | uVar17;
+}
+
 // AppearanceEdit.app: 10008a90
+// KDXClient.lexe: 080c6c24
 // KDXServer.exe: 00435000
 uint UMemory::Checksum(const void *inData, uint inDataSize, uint inInit)
 {
@@ -381,6 +453,7 @@ bool UMemory::Compare(const void *inDataA, const void *inDataB, uint inSize)
 	return false;
 }
 
+// KDXClient.lexe: 080c6990
 // KDXServer.exe: 00434ea0
 uint UMemory::CRC(const void *inData, uint inDataSize, uint inInit)
 {
@@ -447,14 +520,19 @@ uint UMemory::CRC(const void *inData, uint inDataSize, uint inInit)
 // KDXClient.lexe: 08108cc0
 // KDXServer.app: 1005e7c0
 // KDXServer.command: 000176c8
-void UMemory::Dispose(HGLOBAL inPtr)
+void UMemory::Dispose(THdl inHdl)
 {
-	if (inPtr == NULL)
+	if (inHdl == NULL)
 	{
 		return;
 	}
-	GlobalFree(inPtr);
-	gAllocationCount = gAllocationCount - 1;
+#ifdef _WIN32
+	GlobalFree(inHdl);
+#else
+  // tweak: delete wrapper class
+  delete inHdl;
+#endif
+	gHandleCount = gHandleCount - 1;
 	return;
 }
 
@@ -785,20 +863,24 @@ uint UMemory::Move(void *outDest, const void *inSrc, uint inSize)
 // KDXClient.lexe: 08108ba0
 // KDXServer.app: 1005e650
 // KDXServer.command: 0001754c
-TPtr UMemory::New(uint inSize)
+THdl UMemory::NewHandle(uint inSize)
 {
-	HGLOBAL pvVar1;
+	THdl pvVar1;
 
 	if (inSize == 0)
 	{
 		__Fail(0x10002);
 	}
-	pvVar1 = GlobalAlloc(0, inSize);
+#ifdef _WIN32
+	pvVar1 = GlobalAlloc(GMEM_FIXED, inSize);
+#else
+	pvVar1 = new THdlObj(inSize);
+#endif // _WIN32
 	if (pvVar1 == NULL)
 	{
 		__Fail(0x20065);
 	}
-	gAllocationCount = gAllocationCount + 1;
+	gHandleCount = gHandleCount + 1;
 	return pvVar1;
 }
 
@@ -807,21 +889,30 @@ TPtr UMemory::New(uint inSize)
 // KDXClient.lexe: 08108bf8
 // KDXServer.app: 1005e6c0
 // KDXServer.command: 000175c0
-TPtr UMemory::New(const void *inData, uint inSize)
+THdl UMemory::NewHandle(const void *inData, uint inSize)
 {
-	HGLOBAL pvVar1;
+	THdl pvVar1;
 
 	if (inSize == 0)
 	{
 		__Fail(0x10002);
 	}
-	pvVar1 = GlobalAlloc(0, inSize);
+#ifdef _WIN32
+	pvVar1 = GlobalAlloc(GMEM_FIXED, inSize);
+#else
+	// tweak: use wrapper class
+	pvVar1 = new THdlObj(inSize);
+#endif // _WIN32
 	if (pvVar1 == NULL)
 	{
 		__Fail(0x20065);
 	}
-	Move(pvVar1, inData, inSize);
-	gAllocationCount = gAllocationCount + 1;
+	//tweak: use the inlined lock/unlock functions
+	void *pvVar2 = UMemory::Lock(pvVar1);
+	Move(pvVar2, inData, inSize);
+	UMemory::Unlock(pvVar1);
+
+	gHandleCount = gHandleCount + 1;
 	return pvVar1;
 }
 
@@ -831,21 +922,25 @@ TPtr UMemory::New(const void *inData, uint inSize)
 // KDXClient.lexe: 08108c5c
 // KDXServer.app: 1005e750
 // KDXServer.command: 00017648
-TPtr __cdecl UMemory::NewClear(uint inSize)
-
+THdl UMemory::NewHandleClear(uint inSize)
 {
-	HGLOBAL pvVar1;
+	THdl pvVar1;
 
 	if (inSize == 0)
 	{
 		__Fail(0x10002);
 	}
+#ifdef _WIN32
 	pvVar1 = GlobalAlloc(GMEM_ZEROINIT, inSize);
+#else
+	THdl pvVar1 = new THdlObj(inSize);
+	UMemory::Clear(*pvVar1, inSize);
+#endif
 	if (pvVar1 == NULL)
 	{
 		__Fail(0x20065);
 	}
-	gAllocationCount = gAllocationCount + 1;
+	gHandleCount = gHandleCount + 1;
 	return pvVar1;
 }
 
@@ -853,26 +948,30 @@ TPtr __cdecl UMemory::NewClear(uint inSize)
 // KDXClient.exe: 00457800
 // KDXClient.lexe: 08108cec
 // KDXServer.command: 00017724
-TPtr UMemory::Reallocate(TPtr inPtr, uint inSize)
+THdl UMemory::Reallocate(THdl inHdl, uint inSize)
 {
-	HGLOBAL pvVar1;
+	THdl pvVar1;
 
-	if (inPtr == NULL)
+	if (inHdl == NULL)
 	{
 		pvVar1 = NULL;
 		if (inSize != 0)
 		{
-			pvVar1 = New(inSize);
+			pvVar1 = NewHandle(inSize);
 		}
 	}
 	else if (inSize == 0)
 	{
-		Dispose(inPtr);
+		Dispose(inHdl);
 		pvVar1 = NULL;
 	}
 	else
 	{
-		pvVar1 = GlobalReAlloc(inPtr, inSize, 2);
+#ifdef _WIN32
+		pvVar1 = GlobalReAlloc(inHdl, inSize, 2);
+#else
+		*pvVar1 = std::realloc(*inHdl, inSize);
+#endif
 		if (pvVar1 == NULL)
 		{
 			__Fail(0x20065);

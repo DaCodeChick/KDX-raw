@@ -13,6 +13,9 @@ struct STimer
 	bool onceOnly;
 };
 
+// KDXClient.lexe: 081a0c40
+static uint gTimerCount = 0;
+
 // KDXServer.exe: 00481258
 static CPtrList<STimer> gTimers;
 
@@ -52,6 +55,8 @@ STimer *UTimer::New(TMessageProc inProc, void *inContext)
 	pvVar1->msgProc = inProc;
 	pvVar1->msgProcContext = inContext;
 	pvVar1->tag = 0x1f0d2b21;
+	gTimerCount = gTimerCount + 1;
+	gTimers.AddItem(pvVar1);
 	return pvVar1;
 }
 
