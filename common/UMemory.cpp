@@ -756,6 +756,16 @@ void UMemory::Fill(void *outDest, uint inSize, uint inLong)
 	return;
 }
 
+// KDXServer.exe: 0042e470
+longlong UMemory::GetHandleCount(uint *outCount)
+{
+	if (outCount != NULL)
+	{
+		*outCount = gHandleCount;
+	}
+	return 0;
+}
+
 // AppearanceEdit.app: 1004c3c0
 // AppearanceEdit.exe: 00414f20
 // KDXClient.exe: 0047b740
