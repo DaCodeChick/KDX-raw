@@ -1,6 +1,7 @@
 set(SOURCES
 	ANSI.cpp
 	CPtrList.cpp
+	CTokenizer.cpp
 	CTwofish.cpp
 	GrafTypes.cpp
 	UCryptTransact.cpp
@@ -22,6 +23,7 @@ set(SOURCES
 set(HEADERS
 	ANSI.h
 	CPtrList.h
+	CTokenizer.h
 	CTwofish.h
 	GrafTypes.h
 	KDXCommon.h
