@@ -61,6 +61,62 @@ void UCryptTransact::BlockCrypt6E7DFD34(void *ioData, bool inIsDecrypt)
 	return;
 }
 
+// KDXClient.exe: 00472310
+void UCryptTransact::CertificateCrypt(const void *inData, void *outData)
+{
+	uint uVar1;
+	uint uVar2;
+	uint uVar3;
+	uint uVar4;
+
+	uVar1 = (uint) * (byte *)inData;
+	*(byte *)outData = *(byte *)inData;
+	uVar3 = 0x7be0023;
+	uVar2 = 1;
+	if (uVar1 != 0)
+	{
+		if (8 < uVar1)
+		{
+			do
+			{
+				*(byte *)((ulonglong)outData + uVar2) =
+				    (byte)uVar3 ^ *(byte *)((ulonglong)inData + uVar2);
+				uVar3 = (uVar3 ^ uVar2) + 0x23cca7;
+				*(byte *)((ulonglong)outData + uVar2 + 1) =
+				    (byte)uVar3 ^ *(byte *)((ulonglong)inData + uVar2 + 1);
+				uVar3 = (uVar3 ^ uVar2 + 1) + 0x23cca7;
+				*(byte *)((ulonglong)outData + uVar2 + 2) =
+				    (byte)uVar3 ^ *(byte *)((ulonglong)inData + uVar2 + 2);
+				uVar3 = (uVar3 ^ uVar2 + 2) + 0x23cca7;
+				*(byte *)((ulonglong)outData + uVar2 + 3) =
+				    (byte)uVar3 ^ *(byte *)((ulonglong)inData + uVar2 + 3);
+				uVar3 = (uVar3 ^ uVar2 + 3) + 0x23cca7;
+				*(byte *)((ulonglong)outData + uVar2 + 4) =
+				    (byte)uVar3 ^ *(byte *)((ulonglong)inData + uVar2 + 4);
+				uVar3 = (uVar3 ^ uVar2 + 4) + 0x23cca7;
+				*(byte *)((ulonglong)outData + uVar2 + 5) =
+				    (byte)uVar3 ^ *(byte *)((ulonglong)inData + uVar2 + 5);
+				uVar3 = (uVar3 ^ uVar2 + 5) + 0x23cca7;
+				*(byte *)((ulonglong)outData + uVar2 + 6) =
+				    (byte)uVar3 ^ *(byte *)((ulonglong)inData + uVar2 + 6);
+				uVar4 = (uVar3 ^ uVar2 + 6) + 0x23cca7;
+				uVar3 = uVar2 + 7;
+				*(byte *)((ulonglong)outData + uVar2 + 7) =
+				    (byte)uVar4 ^ *(byte *)((ulonglong)inData + uVar2 + 7);
+				uVar2 = uVar2 + 8;
+				uVar3 = (uVar4 ^ uVar3) + 0x23cca7;
+			} while (uVar2 <= uVar1 - 8);
+		}
+		for (; uVar2 <= uVar1; uVar2 = uVar2 + 1)
+		{
+			*(byte *)((ulonglong)outData + uVar2) =
+			    (byte)uVar3 ^ *(byte *)((ulonglong)inData + uVar2);
+			uVar3 = (uVar3 ^ uVar2) + 0x23cca7;
+		}
+	}
+	return;
+}
+
 // KDXServer.exe: 00442070
 void UCryptTransact::GenerateKey(const void *inData, uint inDataSize, void *outData)
 {
