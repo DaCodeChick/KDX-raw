@@ -1,6 +1,73 @@
 #include "UDigest.h"
 #include "UMemory.h"
 
+// KDXClient.exe: 00500610
+static const byte bufEncodingTable[80] = {
+    0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xaa, 0xaa, 0xff, 0xff, 0xaa, 0xff, 0xff,
+    0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+    0xaa, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x0f, 0xff, 0xff, 0xff, 0x26,
+    0x1a, 0x3a, 0x17, 0x18, 0x3b, 0x16, 0x3c, 0x20, 0x0d, 0x3d, 0xff, 0xff, 0xff, 0xbb, 0xff, 0xff,
+    0xff, 0x02, 0x24, 0x00, 0x03, 0x05, 0x19, 0x33, 0x06, 0x07, 0x30, 0x38, 0x08, 0x2c, 0x0a, 0x0b};
+
+// KDXClient.exe: 00472540
+void *UDigest::Base80_Decode(const void *inData, uint inDataSize, uint *outDataSize)
+{
+	uint uVar1;
+	uint uVar2;
+	uint *puVar3;
+	uint uVar4;
+	int iVar5;
+	byte *pbVar6;
+
+	pbVar6 = (byte *)((ulonglong)inData + inDataSize);
+	uVar1 = 0;
+	iVar5 = 0;
+	puVar3 = outDataSize;
+	if (inData < pbVar6)
+	{
+		do
+		{
+			uVar4 = (uint)bufEncodingTable[*(byte *)inData & 0x7f];
+			inData = (void *)((ulonglong)inData + 1);
+			if (uVar4 < 0x40)
+			{
+				uVar2 = uVar1 << 6;
+				iVar5 = iVar5 + 1;
+				uVar1 = uVar2 | uVar4;
+				if (iVar5 == 4)
+				{
+					*(char *)puVar3 = (char)(uVar2 >> 0x10);
+					*(char *)((ulonglong)puVar3 + 1) = (char)(uVar2 >> 8);
+					*(char *)((ulonglong)puVar3 + 2) = (char)uVar1;
+					puVar3 = (uint *)((ulonglong)puVar3 + 3);
+					iVar5 = 0;
+					uVar1 = 0;
+				}
+			}
+			else if (uVar4 != 0xaa)
+			{
+				if (uVar4 != 0xbb)
+				{
+					return NULL;
+				}
+				break;
+			}
+		} while (inData < pbVar6);
+	}
+	if (iVar5 == 2)
+	{
+		*(char *)puVar3 = (char)(uVar1 >> 4);
+		puVar3 = (uint *)((ulonglong)puVar3 + 1);
+	}
+	else if (iVar5 == 3)
+	{
+		*(char *)puVar3 = (char)(uVar1 >> 10);
+		*(char *)((ulonglong)puVar3 + 1) = (char)(uVar1 >> 2);
+		puVar3 = (uint *)((ulonglong)puVar3 + 2);
+	}
+	return (void *)((ulonglong)puVar3 - (ulonglong)outDataSize);
+}
+
 // KDXClient.lexe: 080de6a8
 // KDXServer.exe: 0045c850
 void UDigest::MD5_Encode(const void *inData, uint inDataSize, void *outDigest)

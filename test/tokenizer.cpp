@@ -10,7 +10,8 @@ TEST(Tokenizer, Default)
 	uint size = 0;
 	char delim[4] = {0};
 	CTokenizer tokenizer(str, std::strlen(str), delimiters);
-	for (char *token = (char *)tokenizer.GetNextToken(&size, &delim); token != nullptr; token = (char *)tokenizer.GetNextToken(&size, &delim))
+	for (char *token = (char *)tokenizer.GetNextToken(&size, &delim); token != nullptr;
+	     token = (char *)tokenizer.GetNextToken(&size, &delim))
 	{
 		printf("Size: %u\t, Delimiters: %s\t, Token: %s\n", size, delim, token);
 	}
@@ -23,7 +24,8 @@ TEST(Tokenizer, TrimWhispace)
 	uint size = 0;
 	char delim[4] = {0};
 	CTokenizer tokenizer(str, std::strlen(str), delimiters, 1);
-	for (char *token = (char *)tokenizer.GetNextToken(&size, &delim); token != nullptr; token = (char *)tokenizer.GetNextToken(&size, &delim))
+	for (char *token = (char *)tokenizer.GetNextToken(&size, &delim); token != nullptr;
+	     token = (char *)tokenizer.GetNextToken(&size, &delim))
 	{
 		printf("Size: %u\t, Delimiters: %s\t, Token: %s\n", size, delim, token);
 	}

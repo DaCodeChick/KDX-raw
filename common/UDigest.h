@@ -5,6 +5,7 @@
 class EXPORT UDigest
 {
 public:
+	static void *Base80_Decode(const void *inData, uint inDataSize, uint *outSize);
 	static void MD5_Encode(const void *inData, uint inDataSize, void *outDigest);
 };
 
