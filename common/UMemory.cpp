@@ -12,7 +12,7 @@
 // KDXClient.lexe: 081a0c40
 // KDXServer.app: 1009d3ac
 // KDXServer.command: 000e4edc
-static uint gHandleCount = 0;
+static uint gBlockCount = 0;
 
 // KDXClient.lexe: 08152020
 // KDXServer.exe: 004812c8
@@ -532,7 +532,7 @@ void UMemory::Dispose(THdl inHdl)
 	// tweak: delete wrapper class
 	delete inHdl;
 #endif
-	gHandleCount = gHandleCount - 1;
+	gBlockCount = gBlockCount - 1;
 	return;
 }
 
@@ -757,11 +757,11 @@ void UMemory::Fill(void *outDest, uint inSize, uint inLong)
 }
 
 // KDXServer.exe: 0042e470
-longlong UMemory::GetHandleCount(uint *outCount)
+longlong UMemory::GetBlockCount(uint *outCount)
 {
 	if (outCount != NULL)
 	{
-		*outCount = gHandleCount;
+		*outCount = gBlockCount;
 	}
 	return 0;
 }
@@ -890,7 +890,7 @@ THdl UMemory::NewHandle(uint inSize)
 	{
 		__Fail(0x20065);
 	}
-	gHandleCount = gHandleCount + 1;
+	gBlockCount = gBlockCount + 1;
 	return pvVar1;
 }
 
@@ -922,7 +922,7 @@ THdl UMemory::NewHandle(const void *inData, uint inSize)
 	Move(pvVar2, inData, inSize);
 	UMemory::Unlock(pvVar1);
 
-	gHandleCount = gHandleCount + 1;
+	gBlockCount = gBlockCount + 1;
 	return pvVar1;
 }
 
@@ -950,7 +950,7 @@ THdl UMemory::NewHandleClear(uint inSize)
 	{
 		__Fail(0x20065);
 	}
-	gHandleCount = gHandleCount + 1;
+	gBlockCount = gBlockCount + 1;
 	return pvVar1;
 }
 

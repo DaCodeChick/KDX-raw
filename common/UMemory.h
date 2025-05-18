@@ -21,7 +21,7 @@ public:
 	static void Fill(void *outDest, uint inSize, byte inByte);
 	static void Fill(void *outDest, uint inSize, ushort inWord);
 	static void Fill(void *outDest, uint inSize, uint inLong);
-	static longlong GetHandleCount(uint *outCount);
+	static longlong GetBlockCount(uint *outCount);
 	static void *Lock(THdl inHdl)
 	{
 #ifdef _WIN32
