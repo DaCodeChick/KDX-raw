@@ -5,7 +5,7 @@
 class EXPORT UDigest
 {
 public:
-	void MD5_Encode(const void *inData, uint inDataSize, void *outDigest);
+	static void MD5_Encode(const void *inData, uint inDataSize, void *outDigest);
 };
 
 class EXPORT _MD5
