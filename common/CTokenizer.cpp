@@ -70,23 +70,25 @@ CTokenizer::CTokenizer(void *inOffset, uint inSize, const void *inDelimiters, ui
 	}
 	if ((inOptions & 1) == 0)
 	{
-		mGetNextTokenProc = GetNextTokenDefault;
+		mGetNextTokenProc = &CTokenizer::GetNextTokenDefault;
 	}
 	else if ((inOptions & 2) == 0)
 	{
-		mGetNextTokenProc = GetNextTokenWithDelimiters;
+		mGetNextTokenProc = &CTokenizer::GetNextTokenWithDelimiters;
 	}
 	else
 	{
-		mGetNextTokenProc = GetNextTokenTrimWhitespace;
+		mGetNextTokenProc = &CTokenizer::GetNextTokenTrimWhitespace;
 	}
 }
 
 // KDXServer.exe: 00434b00
 void *CTokenizer::GetNextToken(uint *outSize, void *outDelimiter)
 {
-	(this->*mGetNextTokenProc)(outSize, outDelimiter);
-	return;
+	void *pvVar1;
+
+	pvVar1 = (this->*mGetNextTokenProc)(outSize, outDelimiter);
+	return pvVar1;
 }
 
 // KDXServer.exe: 00434a30

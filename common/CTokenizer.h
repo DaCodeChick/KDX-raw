@@ -5,7 +5,7 @@
 class EXPORT CTokenizer
 {
 public:
-	CTokenizer(void *inOffset, uint inSize, const void *inDelimiters, uint inOptions);
+	CTokenizer(void *inOffset, uint inSize, const void *inDelimiters, uint inOptions = 0);
 	void *GetNextToken(uint *outSize, void *outDelimiter);
 
 private:
