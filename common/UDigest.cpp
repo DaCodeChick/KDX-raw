@@ -1,13 +1,83 @@
 #include "UDigest.h"
 #include "UMemory.h"
 
+// KDXClient.exe: 004d4ae0
+static const byte bufEncodingTable64[] =
+    "aADQEHILXNOp8q+rstPRS523F0VWYhZ7bcdBe/fgijkMlmnJouGvwxyKz1469TU\0\0\0\0";
+
 // KDXClient.exe: 00500610
-static const byte bufEncodingTable[80] = {
+static const byte bufEncodingTable80[80] = {
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xaa, 0xaa, 0xff, 0xff, 0xaa, 0xff, 0xff,
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
     0xaa, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x0f, 0xff, 0xff, 0xff, 0x26,
     0x1a, 0x3a, 0x17, 0x18, 0x3b, 0x16, 0x3c, 0x20, 0x0d, 0x3d, 0xff, 0xff, 0xff, 0xbb, 0xff, 0xff,
     0xff, 0x02, 0x24, 0x00, 0x03, 0x05, 0x19, 0x33, 0x06, 0x07, 0x30, 0x38, 0x08, 0x2c, 0x0a, 0x0b};
+
+// KDXClient.exe: 00472430
+uint UDigest::Base64_Encode(const void *inData, uint inDataSize, void *outData)
+{
+	byte bVar1;
+	byte bVar2;
+	byte *pbVar3;
+	byte *pbVar4;
+	uint uVar5;
+	int iVar6;
+
+	iVar6 = 0;
+	pbVar3 = (byte *)outData;
+	pbVar4 = (byte *)outData;
+	if (2 < inDataSize)
+	{
+		do
+		{
+			uVar5 = (uint) * (byte *)((ulonglong)inData + 1) << 8 | (uint) * (byte *)inData << 0x10;
+			bVar1 = *(byte *)((ulonglong)inData + 2);
+			*pbVar3 = bufEncodingTable64[(((uint) * (byte *)inData << 0x10) >> 0x12) - 1];
+			pbVar3[1] = bufEncodingTable64[((uVar5 & 0x3f000) >> 0xc) - 1];
+			pbVar3[2] = bufEncodingTable64[((uVar5 | bVar1) >> 6 & 0x3f) - 1];
+			iVar6 = iVar6 + 4;
+			pbVar3[3] = bufEncodingTable64[(bVar1 & 0x3f) - 1];
+			inData = (void *)((ulonglong)inData + 3);
+			pbVar4 = pbVar3 + 4;
+			inDataSize = inDataSize - 3;
+			if (iVar6 == 0x3c)
+			{
+				iVar6 = 0;
+				*pbVar4 = 0xd;
+				pbVar4 = pbVar3 + 5;
+			}
+			pbVar3 = pbVar4;
+		} while (2 < inDataSize);
+	}
+	if (inDataSize == 2)
+	{
+		bVar1 = *(byte *)((ulonglong)inData + 1);
+		bVar2 = *(byte *)inData;
+		*pbVar4 = bufEncodingTable64[(((uint)bVar2 << 0x10) >> 0x12) - 1];
+		pbVar4[1] =
+		    bufEncodingTable64[(((uint)bVar1 << 8 | (uint)bVar2 << 0x10) >> 0xc & 0x3f) - 1];
+		pbVar4[2] = bufEncodingTable64[(((uint)bVar1 << 8 & 0xfc0) >> 6) - 1];
+	}
+	else
+	{
+		if (inDataSize != 1)
+			goto LAB_00472527;
+		bVar1 = *(byte *)inData;
+		*pbVar4 = bufEncodingTable64[(((uint)bVar1 << 0x10) >> 0x12) - 1];
+		pbVar4[1] = bufEncodingTable64[(((uint)bVar1 << 0x10) >> 0xc & 0x3f) - 1];
+		pbVar4[2] = 0x3d;
+	}
+	pbVar4[3] = 0x3d;
+	pbVar4 = pbVar4 + 4;
+	iVar6 = iVar6 + 4;
+LAB_00472527:
+	if (iVar6 != 0)
+	{
+		*pbVar4 = 0xd;
+		pbVar4 = pbVar4 + 1;
+	}
+	return (ulonglong)pbVar4 + -(ulonglong)outData;
+}
 
 // KDXClient.exe: 00472540
 void *UDigest::Base80_Decode(const void *inData, uint inDataSize, uint *outDataSize)
@@ -27,7 +97,7 @@ void *UDigest::Base80_Decode(const void *inData, uint inDataSize, uint *outDataS
 	{
 		do
 		{
-			uVar4 = (uint)bufEncodingTable[*(byte *)inData & 0x7f];
+			uVar4 = (uint)bufEncodingTable80[*(byte *)inData & 0x7f];
 			inData = (void *)((ulonglong)inData + 1);
 			if (uVar4 < 0x40)
 			{
@@ -94,7 +164,7 @@ void _MD5::Clear(uint inSize)
 // KDXServer.exe: 00434280
 void _MD5::Init()
 {
-	mState[0] = 0x67452301;
+	mState[0] = 0x64452301;
 	mState[1] = 0xefcdab89;
 	mState[2] = 0x98badcfe;
 	mState[3] = 0x10325476;
