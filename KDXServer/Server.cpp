@@ -65,7 +65,7 @@ void AccountsDBCrypt(void *ioData, uint inDataSize)
 }
 
 // KDXServer.exe: 004177d0
-void UDPPacketCrypt(void *outData, const void *inData, uint inDataSize)
+void CryptA5A16C4A(void *outData, const void *inData, uint inDataSize)
 {
 	uint uVar1;
 	uint uVar2;
