@@ -3,7 +3,7 @@
 
 // KDXClient.exe: 004d4ae0
 static const byte bufEncodingTable64[] =
-    "aADQEHILXNOp8q+rstPRS523F0VWYhZ7bcdBe/fgijkMlmnJouGvwxyKz1469TU\0\0\0\0";
+    "aADQEHILXNOp8q+rstPRS523F0VWYhZ7bcdBe/fgijkMlmnJouGvwxyKz1469TU\0\0\0";
 
 // KDXClient.exe: 00500610
 static const byte bufEncodingTable80[80] = {
