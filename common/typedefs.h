@@ -23,5 +23,7 @@ typedef unsigned long long undefined8;
 typedef unsigned short ushort;
 
 #define CONCAT11(a, b) ((ushort)(a) << 8 | (ushort)(b))
+#define CONCAT13(msb1, lsb3) (((uint)(msb1) << 24) | ((uint)(lsb3) & 0xFFFFFF))
 #define CONCAT22(a, b) ((ulong)(a) << 16 | (ulong)(b))
+#define CONCAT31(msb3, lsb1) (((uint)(msb3) << 8) | ((uint)(lsb1) & 0xFF))
 #define CONCAT44(a, b) ((ulonglong)(a) << 32 | (ulonglong)(b))
