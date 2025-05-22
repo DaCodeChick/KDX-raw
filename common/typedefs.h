@@ -27,3 +27,4 @@ typedef unsigned short ushort;
 #define CONCAT22(a, b) ((ulong)(a) << 16 | (ulong)(b))
 #define CONCAT31(msb3, lsb1) (((uint)(msb3) << 8) | ((uint)(lsb1) & 0xFF))
 #define CONCAT44(a, b) ((ulonglong)(a) << 32 | (ulonglong)(b))
+#define SUB41(a, b) ((uint)((uint)(a) - (uint)(b)))
