@@ -22,6 +22,7 @@ typedef unsigned long undefined4;
 typedef unsigned long long undefined8;
 typedef unsigned short ushort;
 
+#define CARRY4(x, y, carry_in) ((((x) + (y) + (carry_in)) >> 4) & 1)
 #define CONCAT11(a, b) ((ushort)(a) << 8 | (ushort)(b))
 #define CONCAT13(msb1, lsb3) (((uint)(msb1) << 24) | ((uint)(lsb3) & 0xFFFFFF))
 #define CONCAT22(a, b) ((ulong)(a) << 16 | (ulong)(b))
