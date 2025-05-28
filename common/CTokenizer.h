@@ -8,15 +8,14 @@ class EXPORT CTokenizer
 public:
 	/**
 	 * @brief Constructs a tokenizer with the specified parameters.
-	 * 
+	 *
 	 * @param inOffset
-	 * @param inSize 
+	 * @param inSize
 	 * @param inDelimiters
-	 * @param inOptions 
+	 * @param inOptions
 	 */
 	CTokenizer(void *inOffset, uint inSize, const void *inDelimiters, uint inOptions = 0);
-	
-	
+
 	void *GetNextToken(uint *outSize, void *outDelimiter);
 
 private:

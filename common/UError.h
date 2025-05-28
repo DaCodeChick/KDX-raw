@@ -13,7 +13,7 @@ struct SError
 
 /**
  * @brief Fails the current operation with the given error ID.
- * 
+ *
  * @param inID Unique identifier for the error to be raised.
  */
 EXPORT void __Fail(uint inID);

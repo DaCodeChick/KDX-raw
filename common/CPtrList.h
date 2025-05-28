@@ -10,7 +10,7 @@ public:
 
 	/**
 	 * @brief Add a pointer to the front of the list.
-	 * 
+	 *
 	 * @param inPtr Pointer to the item to add.
 	 */
 	void AddFrontItem(void *inPtr);
@@ -22,23 +22,23 @@ public:
 
 	/**
 	 * @brief Remove and return the first item from the list.
-	 * 
+	 *
 	 * @return Pointer to the removed item, or NULL if the list is empty.
 	 */
 	void *PopFront();
 
 	/**
 	 * @brief Remove an item from the list.
-	 * 
+	 *
 	 * @param inPtr Pointer to the item to remove.
 	 * @param inSize Size of the item to remove.
-	 * @return void* 
+	 * @return void*
 	 */
 	void *RemoveItem(void *inPtr, uint inSize);
 
 	/**
 	 * @brief Remove an item from the list.
-	 * 
+	 *
 	 * @param inPtr Pointer to the item to remove.
 	 * @return true if the item was removed, false otherwise.
 	 */
@@ -50,7 +50,7 @@ protected:
 
 	/**
 	 * @brief Preallocate memory for the list.
-	 * 
+	 *
 	 * @param inSize Size of the items to preallocate.
 	 * @param inCount Number of items to preallocate.
 	 */
@@ -58,7 +58,7 @@ protected:
 
 	/**
 	 * @brief Preallocate memory for the list.
-	 * 
+	 *
 	 * @param inSize Size of the items to preallocate.
 	 */
 	void Preallocate(uint inSize);
@@ -66,7 +66,7 @@ protected:
 
 /**
  * @brief A list of pointers to a specific type, derived from CVoidPtrList.
- * 
+ *
  * @tparam T The type of pointers stored in the list.
  */
 template <class T> class CPtrList : public CVoidPtrList
@@ -74,7 +74,7 @@ template <class T> class CPtrList : public CVoidPtrList
 public:
 	/**
 	 * @brief Add a pointer to the end of the list.
-	 * 
+	 *
 	 * @param inPtr Pointer to the item to add.
 	 */
 	void AddBackItem(T *inPtr)
@@ -84,7 +84,7 @@ public:
 
 	/**
 	 * @brief Add a pointer to the front of the list.
-	 * 
+	 *
 	 * @param inPtr Pointer to the item to add.
 	 */
 	void AddFrontItem(T *inPtr)
@@ -94,10 +94,10 @@ public:
 
 	/**
 	 * @brief Add an item to the list.
-	 * 
+	 *
 	 * @param inPtr Pointer to the item to add.
 	 * @param inSize Size of the item to add.
-	 * @return T* 
+	 * @return T*
 	 */
 	T *AddItem(T *inPtr, uint inSize)
 	{
@@ -106,9 +106,9 @@ public:
 
 	/**
 	 * @brief Add an item to the list.
-	 * 
+	 *
 	 * @param inPtr Pointer to the item to add.
-	 * @return T* 
+	 * @return T*
 	 */
 	T *AddItem(T *inPtr)
 	{
@@ -117,11 +117,11 @@ public:
 
 	/**
 	 * @brief Insert an item into the list at a specific offset.
-	 * 
+	 *
 	 * @param inOffset Pointer to the offset where the item will be inserted.
 	 * @param inPtr Pointer to the item to insert.
 	 * @param inSize Size of the item to insert.
-	 * @return T* 
+	 * @return T*
 	 */
 	T *InsertItem(T *inOffset, T *inPtr, uint inSize)
 	{
@@ -130,11 +130,11 @@ public:
 
 	/**
 	 * @brief Insert an item into the list at a specific index.
-	 * 
+	 *
 	 * @param inPtr Pointer to the item to insert.
 	 * @param inIndex Index at which to insert the item.
 	 * @param inFillValue Value to fill if the list needs to grow.
-	 * @return T* 
+	 * @return T*
 	 */
 	T *InsertItem(T *inPtr, uint inIndex, byte inFillValue)
 	{
@@ -143,7 +143,7 @@ public:
 
 	/**
 	 * @brief Check if a pointer is in the list.
-	 * 
+	 *
 	 * @param inPtr Pointer to check.
 	 * @return true if the pointer is in the list, false otherwise.
 	 */
@@ -154,7 +154,7 @@ public:
 
 	/**
 	 * @brief Remove and return the first item from the list.
-	 * 
+	 *
 	 * @return T* Pointer to the removed item, or NULL if the list is empty.
 	 */
 	T *PopFront()
@@ -164,10 +164,10 @@ public:
 
 	/**
 	 * @brief Remove an item from the list.
-	 * 
+	 *
 	 * @param inPtr Pointer to the item to remove.
 	 * @param inSize Size of the item to remove.
-	 * @return T* 
+	 * @return T*
 	 */
 	T *RemoveItem(T *inPtr, uint inSize)
 	{
@@ -176,7 +176,7 @@ public:
 
 	/**
 	 * @brief Remove an item from the list.
-	 * 
+	 *
 	 * @param inPtr Pointer to the item to remove.
 	 * @return true if the item was removed, false otherwise.
 	 */
