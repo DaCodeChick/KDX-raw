@@ -4,6 +4,7 @@
 #include "UCryptTransact.h"
 #include "URegularTransport.h"
 
+/// @brief Client structure for KDX protocol
 struct SMyClient
 {
 	uint tag;
@@ -48,6 +49,7 @@ struct SMyClient
 	CTwofish twofishContext;
 };
 
+/// @brief Header structure for TCP packets
 struct STCPPacketHeader
 {
 	uint key;

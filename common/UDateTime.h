@@ -2,6 +2,7 @@
 
 #include "typedefs.h"
 
+/// @brief Represents a date and time structure.
 struct SCalendarDate
 {
 	short field1_0x0;
@@ -14,6 +15,7 @@ struct SCalendarDate
 	short weekDay;
 };
 
+/// @brief Utility class for date and time operations.
 class EXPORT UDateTime
 {
 public:
