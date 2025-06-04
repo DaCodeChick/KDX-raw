@@ -15,8 +15,21 @@ struct EXPORT SRect
 	int top;    /// The y-coordinate of the top edge of the rectangle.
 	int bottom; /// The y-coordinate of the bottom edge of the rectangle.
 
+	/**
+	 * @brief Aligns the rectangle with the specified reference rectangle.
+	 *
+	 * @param inSourceRect The source rectangle to align.
+	 * @param inOptions Alignment options.
+	 * @param inRefRect The reference rectangle to align with.
+	 */
 	void Align(const SRect *inSourceRect, uint inOptions, const SRect *inRefRect);
 
+	/**
+	 * @brief Centers the rectangle within the specified base rectangle.
+	 *
+	 * @param inBase The base rectangle to center within.
+	 * @param inContainer The container rectangle to constrain the centered rectangle.
+	 */
 	void Center(const SRect *inBase, const SRect *inContainer);
 
 	/**
@@ -33,6 +46,13 @@ struct EXPORT SRect
 	 */
 	void Constrain(const SRect *inRect);
 
+	/**
+	 * @brief Gets the intersection of two rectangles.
+	 *
+	 * @param inRectA The first rectangle.
+	 * @param inRectB The second rectangle.
+	 * @return true if the intersection was found, false otherwise.
+	 */
 	bool GetIntersection(const SRect *inRectA, const SRect *inRectB);
 
 	/**

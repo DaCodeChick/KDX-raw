@@ -14,6 +14,11 @@ public:
 	 */
 	static double ArcTangent(double x);
 
+	/**
+	 * @brief Calculates a random seed value.
+	 *
+	 * @return The calculated random seed value.
+	 */
 	static uint CalcRandomSeed();
 
 	/**
@@ -68,6 +73,11 @@ public:
 	 */
 	static double NormalizeAngle(double x);
 
+	/**
+	 * @brief Calculates the value of π (pi).
+	 *
+	 * @return The value of π.
+	 */
 	static double Pi();
 
 	/**

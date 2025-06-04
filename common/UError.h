@@ -2,6 +2,7 @@
 
 #include "typedefs.h"
 
+/// @brief Structure representing an error.
 struct SError
 {
 	uint id; /// Unique identifier for the error

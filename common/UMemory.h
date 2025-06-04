@@ -159,6 +159,16 @@ public:
 	 */
 	static THdl Reallocate(THdl inHdl, uint inSize);
 
+	/**
+	 * @brief Searches for a block of memory within another block of memory.
+	 *
+	 * @param inSearchData Pointer to the data to search for.
+	 * @param inSearchSize Size of the search data in bytes.
+	 * @param inData Pointer to the block of memory to search in.
+	 * @param inDataSize Size of the memory block to search in bytes.
+	 * @return Pointer to the first occurrence of the search data in the memory block, or nullptr if
+	 * not found.
+	 */
 	static void *Search(const void *inSearchData, uint inSearchSize, const void *inData,
 	                    uint inDataSize);
 
@@ -197,14 +207,22 @@ public:
 	}
 };
 
+/// @brief RAII-style memory handle locker.
 class EXPORT StHandleLocker
 {
 public:
+	/**
+	 * @brief Constructs a handle locker that locks the specified memory handle.
+	 *
+	 * @param inHdl Handle to the memory block to lock.
+	 * @param outPtr Reference to a pointer that will be set to the locked memory block.
+	 */
 	StHandleLocker(THdl inHdl, void *&outPtr) : mHdl(inHdl)
 	{
 		outPtr = UMemory::Lock(mHdl);
 	}
 
+	/// @brief Destroys the handle locker and unlocks the memory block.
 	~StHandleLocker()
 	{
 		UMemory::Unlock(mHdl);
@@ -215,24 +233,38 @@ private:
 };
 
 #ifndef _WIN32
+/// @brief RAII-style memory handle wrapper.
 class THdlObj
 {
 public:
+	/**
+	 * @brief Constructs a handle object with the specified size.
+	 *
+	 * @param inSize Size of the memory block to create in bytes.
+	 */
 	THdlObj(uint inSize) : mHdl(std::malloc(inSize)), mSize(inSize)
 	{
 	}
 
+	/**
+	 * @brief Constructs a handle object with the specified data and size.
+	 *
+	 * @param inData Pointer to the data to initialize the memory block with.
+	 * @param inSize Size of the memory block to create in bytes.
+	 */
 	THdlObj(const void *inData, uint inSize) : mHdl(std::malloc(inSize)), mSize(inSize)
 	{
 		if (mHdl)
 			UMemory::Move(mHdl, inData, inSize);
 	}
 
+	/// @brief Destroys the handle object and frees the memory block.
 	~THdlObj()
 	{
 		std::free(mHdl);
 	}
 
+	/// @brief Returns a pointer to the memory block.
 	operator*()
 	{
 		return mHdl;

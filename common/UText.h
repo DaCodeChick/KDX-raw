@@ -9,13 +9,19 @@ public:
 	/**
 	 * @brief Compares two strings for equality.
 	 *
-	 * @param inTextA
-	 * @param inTextB
+	 * @param inTextA The first string to compare.
+	 * @param inTextB The second string to compare.
 	 * @param inSize The size of the strings to compare.
 	 * @return True if the strings are equal, false otherwise.
 	 */
 	static bool Equal(const char *inTextA, const char *inTextB, uint inSize);
 
+	/**
+	 * @brief Checks if a character is a hexadecimal digit.
+	 *
+	 * @param inChar The character to check.
+	 * @return true if the character is a hexadecimal digit, false otherwise.
+	 */
 	static bool IsHex(uint inChar);
 
 	/**

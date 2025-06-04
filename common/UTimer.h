@@ -26,5 +26,10 @@ public:
 	static STimer *New(TMessageProc inProc, void *inContext);
 	// static void Start(STimer *inRef, uint inMillisecs, int inIsRepeating);
 
+	/**
+	 * @brief Stop a running timer.
+	 *
+	 * @param inRef Pointer to the timer reference to be stopped.
+	 */
 	static void Stop(STimer *inRef);
 };

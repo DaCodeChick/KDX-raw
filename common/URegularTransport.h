@@ -17,5 +17,10 @@ typedef void (*TRHandlerProc)(ushort inListenPort, SRegularTransport *inTpt, int
 class EXPORT URegularTransport
 {
 public:
+	/**
+	 * @brief Configures a socket for regular transport.
+	 *
+	 * @param inSocket The socket to configure.
+	 */
 	static void ConfigureSocket(TSocket inSocket);
 };

@@ -8,6 +8,12 @@ typedef void (*TCryptProc)(void *ioData, bool isDecrypt);
 class EXPORT UCryptTransact
 {
 public:
+	/**
+	 * @brief Encrypts or decrypts data using the specified cryptographic procedure.
+	 *
+	 * @param ioData Pointer to the data to be processed.
+	 * @param inIsDecrypt Flag indicating whether to decrypt (true) or encrypt (false) the data.
+	 */
 	static void BlockCrypt6E7DFD34(void *ioData, bool inIsDecrypt);
 
 	/**

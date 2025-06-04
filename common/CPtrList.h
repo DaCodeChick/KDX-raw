@@ -14,10 +14,50 @@ public:
 	 * @param inPtr Pointer to the item to add.
 	 */
 	void AddFrontItem(void *inPtr);
+
+	/**
+	 * @brief Add an item to the list.
+	 *
+	 * @param inPtr Pointer to the item to add.
+	 * @param inSize Size of the item to add.
+	 * @return
+	 */
 	void *AddItem(void *inPtr, uint inSize);
+
+	/**
+	 * @brief Add an item to the list.
+	 *
+	 * @param inPtr Pointer to the item to add.
+	 * @return
+	 */
 	void *AddItem(void *inPtr);
+
+	/**
+	 * @brief Insert an item into the list at a specific offset.
+	 *
+	 * @param inOffset Pointer to the offset where the item will be inserted.
+	 * @param inPtr Pointer to the item to insert.
+	 * @param inSize Size of the item to insert.
+	 * @return void*
+	 */
 	void *InsertItem(void *inOffset, void *inPtr, uint inSize);
+
+	/**
+	 * @brief Insert an item into the list at a specific index.
+	 *
+	 * @param inPtr Pointer to the item to insert.
+	 * @param inIndex Index at which to insert the item.
+	 * @param inFillValue Value to fill if the list needs to grow.
+	 * @return void*
+	 */
 	void *InsertItem(void *inPtr, uint inIndex, byte inFillValue);
+
+	/**
+	 * @brief Check if a pointer is in the list.
+	 *
+	 * @param inPtr Pointer to check.
+	 * @return true if the pointer is in the list, false otherwise.
+	 */
 	bool IsInList(const void *inPtr) const;
 
 	/**

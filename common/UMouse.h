@@ -6,6 +6,11 @@
 class EXPORT UMouse
 {
 public:
+	/**
+	 * @brief Gets the time interval for double-click detection.
+	 *
+	 * @return The double-click time in milliseconds.
+	 */
 	static uint GetDoubleClickTime();
 
 	/**
@@ -22,5 +27,10 @@ public:
 	 */
 	static void GetLocation(SPoint *outLoc);
 
+	/**
+	 * @brief Sets the current mouse image ID.
+	 *
+	 * @param inID The ID of the new mouse image.
+	 */
 	static void SetImage(uint inID);
 };
