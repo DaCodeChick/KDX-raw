@@ -9,7 +9,7 @@ CTokenizer::CTokenizer(void *inOffset, uint inSize, const void *inDelimiters, ui
 	uint local_14;
 
 	mOffset = (byte *)inOffset;
-	mEnd = (byte *)((ulonglong)inOffset + inSize);
+	mEnd = (byte *)((size_t)inOffset + inSize);
 	mFlags = inOptions;
 	mPos = 0;
 	mDelimiterBits[0] = 0;
@@ -34,38 +34,38 @@ CTokenizer::CTokenizer(void *inOffset, uint inSize, const void *inDelimiters, ui
 		{
 			do
 			{
-				pbVar1 = (byte *)((ulonglong)mDelimiterBits +
-				                  ((*(byte *)((ulonglong)inDelimiters + uVar3) >> 3) - 4));
-				*pbVar1 = *pbVar1 | '\x01' << (*(byte *)((ulonglong)inDelimiters + uVar3) & 7);
-				bVar2 = *(byte *)((ulonglong)inDelimiters + uVar3 + 1);
-				pbVar1 = (byte *)((ulonglong)mDelimiterBits + ((bVar2 >> 3) - 4));
+				pbVar1 = (byte *)((size_t)mDelimiterBits +
+				                  ((*(byte *)((size_t)inDelimiters + uVar3) >> 3) - 4));
+				*pbVar1 = *pbVar1 | '\x01' << (*(byte *)((size_t)inDelimiters + uVar3) & 7);
+				bVar2 = *(byte *)((size_t)inDelimiters + uVar3 + 1);
+				pbVar1 = (byte *)((size_t)mDelimiterBits + ((bVar2 >> 3) - 4));
 				*pbVar1 = *pbVar1 | '\x01' << (bVar2 & 7);
-				bVar2 = *(byte *)((ulonglong)inDelimiters + uVar3 + 2);
-				pbVar1 = (byte *)((ulonglong)mDelimiterBits + ((bVar2 >> 3) - 4));
+				bVar2 = *(byte *)((size_t)inDelimiters + uVar3 + 2);
+				pbVar1 = (byte *)((size_t)mDelimiterBits + ((bVar2 >> 3) - 4));
 				*pbVar1 = *pbVar1 | '\x01' << (bVar2 & 7);
-				bVar2 = *(byte *)((ulonglong)inDelimiters + uVar3 + 3);
-				pbVar1 = (byte *)((ulonglong)mDelimiterBits + ((bVar2 >> 3) - 4));
+				bVar2 = *(byte *)((size_t)inDelimiters + uVar3 + 3);
+				pbVar1 = (byte *)((size_t)mDelimiterBits + ((bVar2 >> 3) - 4));
 				*pbVar1 = *pbVar1 | '\x01' << (bVar2 & 7);
-				bVar2 = *(byte *)((ulonglong)inDelimiters + uVar3 + 4);
-				pbVar1 = (byte *)((ulonglong)mDelimiterBits + ((bVar2 >> 3) - 4));
+				bVar2 = *(byte *)((size_t)inDelimiters + uVar3 + 4);
+				pbVar1 = (byte *)((size_t)mDelimiterBits + ((bVar2 >> 3) - 4));
 				*pbVar1 = *pbVar1 | '\x01' << (bVar2 & 7);
-				bVar2 = *(byte *)((ulonglong)inDelimiters + uVar3 + 5);
-				pbVar1 = (byte *)((ulonglong)mDelimiterBits + ((bVar2 >> 3) - 4));
+				bVar2 = *(byte *)((size_t)inDelimiters + uVar3 + 5);
+				pbVar1 = (byte *)((size_t)mDelimiterBits + ((bVar2 >> 3) - 4));
 				*pbVar1 = *pbVar1 | '\x01' << (bVar2 & 7);
-				bVar2 = *(byte *)((ulonglong)inDelimiters + uVar3 + 6);
-				pbVar1 = (byte *)((ulonglong)mDelimiterBits + ((bVar2 >> 3) - 4));
+				bVar2 = *(byte *)((size_t)inDelimiters + uVar3 + 6);
+				pbVar1 = (byte *)((size_t)mDelimiterBits + ((bVar2 >> 3) - 4));
 				*pbVar1 = *pbVar1 | '\x01' << (bVar2 & 7);
-				bVar2 = *(byte *)((ulonglong)inDelimiters + uVar3 + 7);
+				bVar2 = *(byte *)((size_t)inDelimiters + uVar3 + 7);
 				uVar3 = uVar3 + 8;
-				pbVar1 = (byte *)((ulonglong)mDelimiterBits + ((bVar2 >> 3) - 4));
+				pbVar1 = (byte *)((size_t)mDelimiterBits + ((bVar2 >> 3) - 4));
 				*pbVar1 = *pbVar1 | '\x01' << (bVar2 & 7);
 			} while (uVar3 <= local_14 - 8);
 		}
 		for (; uVar3 <= local_14; uVar3 = uVar3 + 1)
 		{
-			pbVar1 = (byte *)((ulonglong)mDelimiterBits +
-			                  ((*(byte *)((ulonglong)inDelimiters + uVar3) >> 3) - 4));
-			*pbVar1 = *pbVar1 | '\x01' << (*(byte *)((ulonglong)inDelimiters + uVar3) & 7);
+			pbVar1 = (byte *)((size_t)mDelimiterBits +
+			                  ((*(byte *)((size_t)inDelimiters + uVar3) >> 3) - 4));
+			*pbVar1 = *pbVar1 | '\x01' << (*(byte *)((size_t)inDelimiters + uVar3) & 7);
 		}
 	}
 	if ((inOptions & 1) == 0)
@@ -101,8 +101,8 @@ void *CTokenizer::GetNextTokenDefault(uint *outSize, void *outDelimiter)
 	local_14 = mOffset;
 	pbVar2 = local_14;
 	if ((local_14 < mEnd) &&
-	    (bVar1 = *local_14, (1 << (bVar1 & 7) & (uint) * (byte *)((ulonglong)mDelimiterBits +
-	                                                              ((bVar1 >> 3) - 4))) != 0))
+	    (bVar1 = *local_14,
+	     (1 << (bVar1 & 7) & (uint) * (byte *)((size_t)mDelimiterBits + ((bVar1 >> 3) - 4))) != 0))
 	{
 		if (outDelimiter != NULL)
 		{
@@ -115,21 +115,21 @@ void *CTokenizer::GetNextTokenDefault(uint *outSize, void *outDelimiter)
 		mOffset = local_14 + 1;
 		return local_14;
 	}
-	while ((pbVar2 < mEnd && ((1 << (*pbVar2 & 7) & (uint) * (byte *)((ulonglong)mDelimiterBits +
+	while ((pbVar2 < mEnd && ((1 << (*pbVar2 & 7) & (uint) * (byte *)((size_t)mDelimiterBits +
 	                                                                  ((*pbVar2 >> 3) - 4))) == 0)))
 	{
 		pbVar2 = pbVar2 + 1;
 	}
 	if (outSize != NULL)
 	{
-		*outSize = (ulonglong)pbVar2 - (ulonglong)local_14;
+		*outSize = (size_t)pbVar2 - (size_t)local_14;
 	}
 	if (outDelimiter != NULL)
 	{
 		*(undefined1 *)outDelimiter = 0;
 	}
 	mOffset = pbVar2;
-	if ((ulonglong)pbVar2 - (ulonglong)local_14 == 0)
+	if ((size_t)pbVar2 - (size_t)local_14 == 0)
 	{
 		local_14 = NULL;
 	}
@@ -144,26 +144,26 @@ void *CTokenizer::GetNextTokenWithDelimiters(uint *outSize, void *outDelimiter)
 
 	pbVar2 = mOffset;
 	while ((pbVar1 = pbVar2,
-	        pbVar2 < mEnd && ((1 << (*pbVar2 & 7) & (uint) * (byte *)((ulonglong)mDelimiterBits +
+	        pbVar2 < mEnd && ((1 << (*pbVar2 & 7) & (uint) * (byte *)((size_t)mDelimiterBits +
 	                                                                  ((*pbVar2 >> 3) - 4))) != 0)))
 	{
 		pbVar2 = pbVar2 + 1;
 	}
-	while ((pbVar1 < mEnd && ((1 << (*pbVar1 & 7) & (uint) * (byte *)((ulonglong)mDelimiterBits +
+	while ((pbVar1 < mEnd && ((1 << (*pbVar1 & 7) & (uint) * (byte *)((size_t)mDelimiterBits +
 	                                                                  ((*pbVar1 >> 3) - 4))) == 0)))
 	{
 		pbVar1 = pbVar1 + 1;
 	}
 	if (outSize != NULL)
 	{
-		*outSize = (ulonglong)pbVar1 - (ulonglong)pbVar2;
+		*outSize = (size_t)pbVar1 - (size_t)pbVar2;
 	}
 	if (outDelimiter != NULL)
 	{
 		*(byte *)outDelimiter = 0;
 	}
 	mOffset = pbVar1;
-	if ((ulonglong)pbVar1 - (ulonglong)pbVar2 == 0)
+	if ((size_t)pbVar1 - (size_t)pbVar2 == 0)
 	{
 		pbVar2 = NULL;
 	}
@@ -197,12 +197,12 @@ void *CTokenizer::GetNextTokenTrimWhitespace(uint *outSize, void *outDelimiter)
 	{
 		bVar1 = *pbVar4;
 		pbVar4 = pbVar4 + 1;
-		if ((1 << (bVar1 & 7) &
-		     (uint) * (byte *)((ulonglong)mDelimiterBits + ((bVar1 >> 3) - 4))) != 0)
+		if ((1 << (bVar1 & 7) & (uint) * (byte *)((size_t)mDelimiterBits + ((bVar1 >> 3) - 4))) !=
+		    0)
 		{
 			if (outSize != NULL)
 			{
-				*outSize = (ulonglong)(pbVar4 + (-1 - (ulonglong)pbVar2));
+				*outSize = (size_t)(pbVar4 + (-1 - (size_t)pbVar2));
 			}
 			mOffset = pbVar4;
 			return pbVar2;
@@ -210,7 +210,7 @@ void *CTokenizer::GetNextTokenTrimWhitespace(uint *outSize, void *outDelimiter)
 	} while (pbVar4 < pbVar3);
 	if (outSize != NULL)
 	{
-		*outSize = (ulonglong)pbVar3 - (ulonglong)pbVar2;
+		*outSize = (size_t)pbVar3 - (size_t)pbVar2;
 	}
 	mOffset = pbVar3;
 	return pbVar2;

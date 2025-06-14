@@ -30,14 +30,14 @@ uint UDigest::Base64_Encode(const void *inData, uint inDataSize, void *outData)
 	{
 		do
 		{
-			uVar5 = (uint) * (byte *)((ulonglong)inData + 1) << 8 | (uint) * (byte *)inData << 0x10;
-			bVar1 = *(byte *)((ulonglong)inData + 2);
+			uVar5 = (uint) * (byte *)((size_t)inData + 1) << 8 | (uint) * (byte *)inData << 0x10;
+			bVar1 = *(byte *)((size_t)inData + 2);
 			*pbVar3 = bufEncodingTable64[(((uint) * (byte *)inData << 0x10) >> 0x12) - 1];
 			pbVar3[1] = bufEncodingTable64[((uVar5 & 0x3f000) >> 0xc) - 1];
 			pbVar3[2] = bufEncodingTable64[((uVar5 | bVar1) >> 6 & 0x3f) - 1];
 			iVar6 = iVar6 + 4;
 			pbVar3[3] = bufEncodingTable64[(bVar1 & 0x3f) - 1];
-			inData = (void *)((ulonglong)inData + 3);
+			inData = (void *)((size_t)inData + 3);
 			pbVar4 = pbVar3 + 4;
 			inDataSize = inDataSize - 3;
 			if (iVar6 == 0x3c)
@@ -51,7 +51,7 @@ uint UDigest::Base64_Encode(const void *inData, uint inDataSize, void *outData)
 	}
 	if (inDataSize == 2)
 	{
-		bVar1 = *(byte *)((ulonglong)inData + 1);
+		bVar1 = *(byte *)((size_t)inData + 1);
 		bVar2 = *(byte *)inData;
 		*pbVar4 = bufEncodingTable64[(((uint)bVar2 << 0x10) >> 0x12) - 1];
 		pbVar4[1] =
@@ -76,7 +76,7 @@ LAB_00472527:
 		*pbVar4 = 0xd;
 		pbVar4 = pbVar4 + 1;
 	}
-	return (ulonglong)pbVar4 + -(ulonglong)outData;
+	return (size_t)pbVar4 + -(size_t)outData;
 }
 
 // KDXClient.exe: 00472540
@@ -89,7 +89,7 @@ void *UDigest::Base80_Decode(const void *inData, uint inDataSize, uint *outDataS
 	int iVar5;
 	byte *pbVar6;
 
-	pbVar6 = (byte *)((ulonglong)inData + inDataSize);
+	pbVar6 = (byte *)((size_t)inData + inDataSize);
 	uVar1 = 0;
 	iVar5 = 0;
 	puVar3 = outDataSize;
@@ -98,7 +98,7 @@ void *UDigest::Base80_Decode(const void *inData, uint inDataSize, uint *outDataS
 		do
 		{
 			uVar4 = (uint)bufEncodingTable80[*(byte *)inData & 0x7f];
-			inData = (void *)((ulonglong)inData + 1);
+			inData = (void *)((size_t)inData + 1);
 			if (uVar4 < 0x40)
 			{
 				uVar2 = uVar1 << 6;
@@ -107,9 +107,9 @@ void *UDigest::Base80_Decode(const void *inData, uint inDataSize, uint *outDataS
 				if (iVar5 == 4)
 				{
 					*(char *)puVar3 = (char)(uVar2 >> 0x10);
-					*(char *)((ulonglong)puVar3 + 1) = (char)(uVar2 >> 8);
-					*(char *)((ulonglong)puVar3 + 2) = (char)uVar1;
-					puVar3 = (uint *)((ulonglong)puVar3 + 3);
+					*(char *)((size_t)puVar3 + 1) = (char)(uVar2 >> 8);
+					*(char *)((size_t)puVar3 + 2) = (char)uVar1;
+					puVar3 = (uint *)((size_t)puVar3 + 3);
 					iVar5 = 0;
 					uVar1 = 0;
 				}
@@ -127,15 +127,15 @@ void *UDigest::Base80_Decode(const void *inData, uint inDataSize, uint *outDataS
 	if (iVar5 == 2)
 	{
 		*(char *)puVar3 = (char)(uVar1 >> 4);
-		puVar3 = (uint *)((ulonglong)puVar3 + 1);
+		puVar3 = (uint *)((size_t)puVar3 + 1);
 	}
 	else if (iVar5 == 3)
 	{
 		*(char *)puVar3 = (char)(uVar1 >> 10);
-		*(char *)((ulonglong)puVar3 + 1) = (char)(uVar1 >> 2);
-		puVar3 = (uint *)((ulonglong)puVar3 + 2);
+		*(char *)((size_t)puVar3 + 1) = (char)(uVar1 >> 2);
+		puVar3 = (uint *)((size_t)puVar3 + 2);
 	}
-	return (void *)((ulonglong)puVar3 - (ulonglong)outDataSize);
+	return (void *)((size_t)puVar3 - (size_t)outDataSize);
 }
 
 // KDXClient.lexe: 080de6a8
@@ -296,16 +296,16 @@ void _MD5::Report(void *outDigest)
 	*(uint *)outDigest =
 	    (uVar3 & 0xff00) << 8 | uVar3 >> 0x18 | uVar3 >> 8 & 0xff00 | uVar3 << 0x18;
 	uVar3 = mState[1];
-	*(uint *)((ulonglong)outDigest + 4) =
+	*(uint *)((size_t)outDigest + 4) =
 	    (uVar3 & 0xff00) << 8 | uVar3 >> 0x18 | uVar3 >> 8 & 0xff00 | uVar3 << 0x18;
 	uVar3 = mState[2];
-	*(uint *)((ulonglong)outDigest + 8) =
+	*(uint *)((size_t)outDigest + 8) =
 	    (uVar3 & 0xff00) << 8 | uVar3 >> 0x18 | uVar3 >> 8 & 0xff00 | uVar3 << 0x18;
 	uVar3 = mState[3];
-	*(uint *)((ulonglong)outDigest + 0xc) =
+	*(uint *)((size_t)outDigest + 0xc) =
 	    (uVar3 & 0xff00) << 8 | uVar3 >> 0x18 | uVar3 >> 8 & 0xff00 | uVar3 << 0x18;
 	uVar3 = mState[4];
-	*(uint *)((ulonglong)outDigest + 0x10) =
+	*(uint *)((size_t)outDigest + 0x10) =
 	    (uVar3 & 0xff00) << 8 | uVar3 >> 0x18 | uVar3 >> 8 & 0xff00 | uVar3 << 0x18;
 	Clear(sizeof(_MD5)); // tweak: ensure proper size of _MD5
 	return;
@@ -747,7 +747,7 @@ void _MD5::Transform(const uint *inBlock)
 }
 
 // KDXClient.lexe: 080de748
-void __cdecl _MD5::Update(const void *inData, uint inDataSize)
+void _MD5::Update(const void *inData, uint inDataSize)
 {
 	int iVar1;
 	uint uVar2;
@@ -767,7 +767,7 @@ void __cdecl _MD5::Update(const void *inData, uint inDataSize)
 				iVar1 = mBufferLength;
 				mBufferLength = mBufferLength + 1;
 				uVar2 = *(const uint *)inData;
-				inData = (const void *)((ulonglong)inData + 1);
+				inData = (const void *)((size_t)inData + 1);
 				mBuffer[iVar1] = (uchar)uVar2;
 				inDataSize = inDataSize - 1;
 			}
@@ -787,14 +787,14 @@ void __cdecl _MD5::Update(const void *inData, uint inDataSize)
 			Transform((const uint *)inData);
 			mBufferLength = 0;
 			mCount = mCount + 1;
-			inData = (const void *)((ulonglong)inData + 0x40);
+			inData = (const void *)((size_t)inData + 0x40);
 		}
 		while ((inDataSize != 0 && (mBufferLength < 0x40)))
 		{
 			iVar1 = mBufferLength;
 			mBufferLength = mBufferLength + 1;
 			uVar2 = *(const uint *)inData;
-			inData = (void *)((ulonglong)inData + 1);
+			inData = (void *)((size_t)inData + 1);
 			mBuffer[iVar1] = (uchar)uVar2;
 			inDataSize = inDataSize - 1;
 		}

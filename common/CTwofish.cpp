@@ -302,249 +302,249 @@ CTwofish::CTwofish(const void *inData)
 		local_58 = Q[1][uVar4 + 1];
 	}
 	local_5e = local_57;
-	if (*(byte *)((ulonglong)inData + 1) != 0)
+	if (*(byte *)((size_t)inData + 1) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 1)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 1)];
 		bVar1 = bVar1 ^ Q[1][uVar4 + 0x2d];
 		local_58 = local_58 ^ Q[1][uVar4 + 0x44];
 		local_5e = local_57 ^ Q[1][uVar4 + 0x8a];
 		local_57 = local_57 ^ Q[1][uVar4 + 0xa4];
 	}
-	if (*(byte *)((ulonglong)inData + 2) != 0)
+	if (*(byte *)((size_t)inData + 2) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 2)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 2)];
 		bVar1 = bVar1 ^ Q[1][uVar4 + 0x8a];
 		local_57 = local_57 ^ Q[1][uVar4 + 0xd5];
 		local_58 = local_58 ^ Q[1][uVar4 + 0xbf];
 		local_5e = local_5e ^ Q[1][uVar4 + 0xd1];
 	}
-	if (*(byte *)((ulonglong)inData + 3) != 0)
+	if (*(byte *)((size_t)inData + 3) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 3)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 3)];
 		bVar1 = bVar1 ^ Q[1][uVar4 + 0xd1];
 		local_57 = local_57 ^ Q[1][uVar4 + 0x7f];
 		local_58 = local_58 ^ Q[1][uVar4 + 0x3d];
 		local_5e = local_5e ^ Q[1][uVar4 + 0x99];
 	}
-	if (*(byte *)((ulonglong)inData + 4) != 0)
+	if (*(byte *)((size_t)inData + 4) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 4)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 4)];
 		bVar1 = bVar1 ^ Q[1][uVar4 + 0x99];
 		local_57 = local_57 ^ Q[1][uVar4 + 0x46];
 		local_58 = local_58 ^ Q[1][uVar4 + 0x66];
 		local_5e = local_5e ^ Q[1][uVar4 + 0x96];
 	}
-	if (*(byte *)((ulonglong)inData + 5) != 0)
+	if (*(byte *)((size_t)inData + 5) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 5)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 5)];
 		bVar1 = bVar1 ^ Q[1][uVar4 + 0x96];
 		local_57 = local_57 ^ Q[1][uVar4 + 0x3c];
 		local_58 = local_58 ^ Q[1][uVar4 + 0x5b];
 		local_5e = local_5e ^ Q[1][uVar4 + 0xed];
 	}
-	if (*(byte *)((ulonglong)inData + 6) != 0)
+	if (*(byte *)((size_t)inData + 6) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 6)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 6)];
 		bVar1 = bVar1 ^ Q[1][uVar4 + 0xed];
 		local_57 = local_57 ^ Q[1][uVar4 + 0x37];
 		local_58 = local_58 ^ Q[1][uVar4 + 0x4f];
 		local_5e = local_5e ^ Q[1][uVar4 + 0xe0];
 	}
-	if (*(byte *)((ulonglong)inData + 7) != 0)
+	if (*(byte *)((size_t)inData + 7) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 7)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 7)];
 		bVar1 = bVar1 ^ Q[1][uVar4 + 0xe0];
 		local_57 = local_57 ^ Q[1][uVar4 + 0xd0];
 		local_58 = local_58 ^ Q[1][uVar4 + 0x8c];
 		local_5e = local_5e ^ Q[1][uVar4 + 0x17];
 	}
-	if (*(byte *)((ulonglong)inData + 8) != 0)
+	if (*(byte *)((size_t)inData + 8) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 8)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 8)];
 		local_5a = Q[1][uVar4];
 		local_51 = Q[1][uVar4 + 0x2d];
 		local_53 = Q[1][uVar4 + 1];
 	}
 	local_59 = local_51;
-	if (*(byte *)((ulonglong)inData + 9) != 0)
+	if (*(byte *)((size_t)inData + 9) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 9)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 9)];
 		local_5a = local_5a ^ Q[1][uVar4 + 0x2d];
 		local_59 = local_51 ^ Q[1][uVar4 + 0xa4];
 		local_53 = local_53 ^ Q[1][uVar4 + 0x44];
 		local_51 = local_51 ^ Q[1][uVar4 + 0x8a];
 	}
-	if (*(byte *)((ulonglong)inData + 10) != 0)
+	if (*(byte *)((size_t)inData + 10) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 10)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 10)];
 		local_5a = local_5a ^ Q[1][uVar4 + 0x8a];
 		local_59 = local_59 ^ Q[1][uVar4 + 0xd5];
 		local_53 = local_53 ^ Q[1][uVar4 + 0xbf];
 		local_51 = local_51 ^ Q[1][uVar4 + 0xd1];
 	}
-	if (*(byte *)((ulonglong)inData + 0xb) != 0)
+	if (*(byte *)((size_t)inData + 0xb) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0xb)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0xb)];
 		local_5a = local_5a ^ Q[1][uVar4 + 0xd1];
 		local_59 = local_59 ^ Q[1][uVar4 + 0x7f];
 		local_53 = local_53 ^ Q[1][uVar4 + 0x3d];
 		local_51 = local_51 ^ Q[1][uVar4 + 0x99];
 	}
-	if (*(byte *)((ulonglong)inData + 0xc) != 0)
+	if (*(byte *)((size_t)inData + 0xc) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0xc)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0xc)];
 		local_5a = local_5a ^ Q[1][uVar4 + 0x99];
 		local_59 = local_59 ^ Q[1][uVar4 + 0x46];
 		local_53 = local_53 ^ Q[1][uVar4 + 0x66];
 		local_51 = local_51 ^ Q[1][uVar4 + 0x96];
 	}
-	if (*(byte *)((ulonglong)inData + 0xd) != 0)
+	if (*(byte *)((size_t)inData + 0xd) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0xd)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0xd)];
 		local_5a = local_5a ^ Q[1][uVar4 + 0x96];
 		local_59 = local_59 ^ Q[1][uVar4 + 0x3c];
 		local_53 = local_53 ^ Q[1][uVar4 + 0x5b];
 		local_51 = local_51 ^ Q[1][uVar4 + 0xed];
 	}
-	if (*(byte *)((ulonglong)inData + 0xe) != 0)
+	if (*(byte *)((size_t)inData + 0xe) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0xe)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0xe)];
 		local_5a = local_5a ^ Q[1][uVar4 + 0xed];
 		local_59 = local_59 ^ Q[1][uVar4 + 0x37];
 		local_53 = local_53 ^ Q[1][uVar4 + 0x4f];
 		local_51 = local_51 ^ Q[1][uVar4 + 0xe0];
 	}
-	if (*(byte *)((ulonglong)inData + 0xf) != 0)
+	if (*(byte *)((size_t)inData + 0xf) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0xf)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0xf)];
 		local_5a = local_5a ^ Q[1][uVar4 + 0xe0];
 		local_59 = local_59 ^ Q[1][uVar4 + 0xd0];
 		local_53 = local_53 ^ Q[1][uVar4 + 0x8c];
 		local_51 = local_51 ^ Q[1][uVar4 + 0x17];
 	}
-	if (*(byte *)((ulonglong)inData + 0x10) != 0)
+	if (*(byte *)((size_t)inData + 0x10) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x10)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x10)];
 		local_56 = Q[1][uVar4];
 		local_54 = Q[1][uVar4 + 0x2d];
 		local_55 = Q[1][uVar4 + 1];
 	}
 	local_5d = local_54;
-	if (*(byte *)((ulonglong)inData + 0x11) != 0)
+	if (*(byte *)((size_t)inData + 0x11) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x11)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x11)];
 		local_56 = local_56 ^ Q[1][uVar4 + 0x2d];
 		local_55 = local_55 ^ Q[1][uVar4 + 0x44];
 		local_5d = local_54 ^ Q[1][uVar4 + 0x8a];
 		local_54 = local_54 ^ Q[1][uVar4 + 0xa4];
 	}
-	if (*(byte *)((ulonglong)inData + 0x12) != 0)
+	if (*(byte *)((size_t)inData + 0x12) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x12)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x12)];
 		local_56 = local_56 ^ Q[1][uVar4 + 0x8a];
 		local_54 = local_54 ^ Q[1][uVar4 + 0xd5];
 		local_55 = local_55 ^ Q[1][uVar4 + 0xbf];
 		local_5d = local_5d ^ Q[1][uVar4 + 0xd1];
 	}
-	if (*(byte *)((ulonglong)inData + 0x13) != 0)
+	if (*(byte *)((size_t)inData + 0x13) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x13)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x13)];
 		local_56 = local_56 ^ Q[1][uVar4 + 0xd1];
 		local_54 = local_54 ^ Q[1][uVar4 + 0x7f];
 		local_55 = local_55 ^ Q[1][uVar4 + 0x3d];
 		local_5d = local_5d ^ Q[1][uVar4 + 0x99];
 	}
-	if (*(byte *)((ulonglong)inData + 0x14) != 0)
+	if (*(byte *)((size_t)inData + 0x14) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x14)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x14)];
 		local_56 = local_56 ^ Q[1][uVar4 + 0x99];
 		local_54 = local_54 ^ Q[1][uVar4 + 0x46];
 		local_55 = local_55 ^ Q[1][uVar4 + 0x66];
 		local_5d = local_5d ^ Q[1][uVar4 + 0x96];
 	}
-	if (*(byte *)((ulonglong)inData + 0x15) != 0)
+	if (*(byte *)((size_t)inData + 0x15) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x15)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x15)];
 		local_56 = local_56 ^ Q[1][uVar4 + 0x96];
 		local_54 = local_54 ^ Q[1][uVar4 + 0x3c];
 		local_55 = local_55 ^ Q[1][uVar4 + 0x5b];
 		local_5d = local_5d ^ Q[1][uVar4 + 0xed];
 	}
-	if (*(byte *)((ulonglong)inData + 0x16) != 0)
+	if (*(byte *)((size_t)inData + 0x16) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x16)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x16)];
 		local_56 = local_56 ^ Q[1][uVar4 + 0xed];
 		local_54 = local_54 ^ Q[1][uVar4 + 0x37];
 		local_55 = local_55 ^ Q[1][uVar4 + 0x4f];
 		local_5d = local_5d ^ Q[1][uVar4 + 0xe0];
 	}
-	if (*(byte *)((ulonglong)inData + 0x17) != 0)
+	if (*(byte *)((size_t)inData + 0x17) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x17)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x17)];
 		local_56 = local_56 ^ Q[1][uVar4 + 0xe0];
 		local_54 = local_54 ^ Q[1][uVar4 + 0xd0];
 		local_55 = local_55 ^ Q[1][uVar4 + 0x8c];
 		local_5d = local_5d ^ Q[1][uVar4 + 0x17];
 	}
-	if (*(byte *)((ulonglong)inData + 0x18) != 0)
+	if (*(byte *)((size_t)inData + 0x18) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x18)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x18)];
 		local_52 = Q[1][uVar4];
 		local_5b = Q[1][uVar4 + 0x2d];
 		local_5c = Q[1][uVar4 + 1];
 	}
 	bVar2 = local_5b;
-	if (*(byte *)((ulonglong)inData + 0x19) != 0)
+	if (*(byte *)((size_t)inData + 0x19) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x19)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x19)];
 		local_52 = local_52 ^ Q[1][uVar4 + 0x2d];
 		local_5c = local_5c ^ Q[1][uVar4 + 0x44];
 		bVar2 = local_5b ^ Q[1][uVar4 + 0x8a];
 		local_5b = local_5b ^ Q[1][uVar4 + 0xa4];
 	}
-	if (*(byte *)((ulonglong)inData + 0x1a) != 0)
+	if (*(byte *)((size_t)inData + 0x1a) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x1a)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x1a)];
 		local_52 = local_52 ^ Q[1][uVar4 + 0x8a];
 		local_5b = local_5b ^ Q[1][uVar4 + 0xd5];
 		local_5c = local_5c ^ Q[1][uVar4 + 0xbf];
 		bVar2 = bVar2 ^ Q[1][uVar4 + 0xd1];
 	}
-	if (*(byte *)((ulonglong)inData + 0x1b) != 0)
+	if (*(byte *)((size_t)inData + 0x1b) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x1b)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x1b)];
 		local_52 = local_52 ^ Q[1][uVar4 + 0xd1];
 		local_5b = local_5b ^ Q[1][uVar4 + 0x7f];
 		local_5c = local_5c ^ Q[1][uVar4 + 0x3d];
 		bVar2 = bVar2 ^ Q[1][uVar4 + 0x99];
 	}
-	if (*(byte *)((ulonglong)inData + 0x1c) != 0)
+	if (*(byte *)((size_t)inData + 0x1c) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x1c)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x1c)];
 		local_52 = local_52 ^ Q[1][uVar4 + 0x99];
 		local_5b = local_5b ^ Q[1][uVar4 + 0x46];
 		local_5c = local_5c ^ Q[1][uVar4 + 0x66];
 		bVar2 = bVar2 ^ Q[1][uVar4 + 0x96];
 	}
-	if (*(byte *)((ulonglong)inData + 0x1d) != 0)
+	if (*(byte *)((size_t)inData + 0x1d) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x1d)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x1d)];
 		local_52 = local_52 ^ Q[1][uVar4 + 0x96];
 		local_5b = local_5b ^ Q[1][uVar4 + 0x3c];
 		local_5c = local_5c ^ Q[1][uVar4 + 0x5b];
 		bVar2 = bVar2 ^ Q[1][uVar4 + 0xed];
 	}
-	if (*(byte *)((ulonglong)inData + 0x1e) != 0)
+	if (*(byte *)((size_t)inData + 0x1e) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x1e)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x1e)];
 		local_52 = local_52 ^ Q[1][uVar4 + 0xed];
 		local_5b = local_5b ^ Q[1][uVar4 + 0x37];
 		local_5c = local_5c ^ Q[1][uVar4 + 0x4f];
 		bVar2 = bVar2 ^ Q[1][uVar4 + 0xe0];
 	}
-	if (*(byte *)((ulonglong)inData + 0x1f) != 0)
+	if (*(byte *)((size_t)inData + 0x1f) != 0)
 	{
-		uVar4 = (uint)Q[0][*(byte *)((ulonglong)inData + 0x1f)];
+		uVar4 = (uint)Q[0][*(byte *)((size_t)inData + 0x1f)];
 		local_52 = local_52 ^ Q[1][uVar4 + 0xe0];
 		local_5b = local_5b ^ Q[1][uVar4 + 0xd0];
 		local_5c = local_5c ^ Q[1][uVar4 + 0x8c];
@@ -556,761 +556,761 @@ CTwofish::CTwofish(const void *inData)
 	do
 	{
 		mSBox[0][iVar6] =
-		    MDS_GF_FB[MDS[0][MDS[0][MDS[1][*(byte *)((ulonglong)P + iVar3) ^ bVar1] ^ local_5a] ^
+		    MDS_GF_FB[MDS[0][MDS[0][MDS[1][*(byte *)((size_t)P + iVar3) ^ bVar1] ^ local_5a] ^
 		                     local_56] ^
 		              local_52];
 		mSBox[1][iVar6] =
-		    MDS_GF_FD[MDS[0][MDS[1][MDS[1][*(byte *)((ulonglong)P + iVar5) ^ local_57] ^ local_59] ^
+		    MDS_GF_FD[MDS[0][MDS[1][MDS[1][*(byte *)((size_t)P + iVar5) ^ local_57] ^ local_59] ^
 		                     local_54] ^
 		              local_5b];
 		mSBox[2][iVar6] =
-		    MDS_GF_FE[MDS[1][MDS[0][MDS[0][*(byte *)((ulonglong)P + iVar5) ^ local_58] ^ local_53] ^
+		    MDS_GF_FE[MDS[1][MDS[0][MDS[0][*(byte *)((size_t)P + iVar5) ^ local_58] ^ local_53] ^
 		                     local_55] ^
 		              local_5c];
 		mSBox[3][iVar6] =
-		    MDS_GF_FF[MDS[1][MDS[1][MDS[0][*(byte *)((ulonglong)P + iVar3) ^ local_5e] ^ local_51] ^
+		    MDS_GF_FF[MDS[1][MDS[1][MDS[0][*(byte *)((size_t)P + iVar3) ^ local_5e] ^ local_51] ^
 		                     local_5d] ^
 		              bVar2];
 		iVar6 = iVar6 + 1;
 		iVar5 = iVar5 + 2;
 		iVar3 = iVar3 + 2;
 	} while (iVar6 < 0x100);
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x67]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0xf3]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x67]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0xf3]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x67]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0xf3]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x67]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0xf3]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0xa9]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0x75]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0xa9]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0x75]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0xa9]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0x75]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0xa9]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0x75]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[1] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xe8]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0xf4]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0xe8]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0xf4]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0xe8]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0xf4]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0xe8]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0xf4]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0xb3]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xc6]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0xb3]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xc6]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0xb3]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xc6]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0xb3]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xc6]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[2] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[3] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xfd]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0x7b]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0xfd]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0x7b]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0xfd]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0x7b]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0xfd]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0x7b]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 4]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xdb]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 4]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xdb]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 4]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xdb]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 4]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xdb]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[4] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[5] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x76]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 200]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x76]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 200]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x76]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 200]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x76]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 200]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0xa3]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xfb]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0xa3]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xfb]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0xa3]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xfb]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0xa3]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xfb]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[6] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[7] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x92]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0xd3]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x92]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0xd3]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x92]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0xd3]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x92]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0xd3]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0x9a]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0x4a]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0x9a]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0x4a]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0x9a]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0x4a]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0x9a]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0x4a]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[8] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[9] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x78]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0x6b]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x78]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0x6b]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x78]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0x6b]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x78]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0x6b]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0x80]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xe6]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0x80]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xe6]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0x80]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xe6]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0x80]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xe6]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[10] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0xb] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xdd]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0x7d]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0xdd]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0x7d]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0xdd]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0x7d]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0xdd]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0x7d]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0xe4]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0x45]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0xe4]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0x45]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0xe4]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0x45]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0xe4]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0x45]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0xc] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0xd] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x38]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0x4b]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x38]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0x4b]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x38]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0x4b]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x38]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0x4b]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0xd1]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xe8]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0xd1]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xe8]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0xd1]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xe8]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0xd1]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xe8]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0xe] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0xf] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xc6]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0x32]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0xc6]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0x32]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0xc6]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0x32]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0xc6]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0x32]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0xd]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xd6]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0xd]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xd6]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0xd]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xd6]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0xd]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xd6]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x10] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x11] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x98]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0xfd]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x98]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0xfd]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x98]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0xfd]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x98]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0xfd]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0x35]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xd8]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0x35]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xd8]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0x35]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xd8]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0x35]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xd8]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x12] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x13] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xf7]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0x71]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0xf7]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0x71]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0xf7]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0x71]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0xf7]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0x71]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0x18]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0x37]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0x18]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0x37]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0x18]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0x37]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0x18]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0x37]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x14] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x15] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x6c]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0xe1]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x6c]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0xe1]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x6c]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0xe1]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x6c]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0xe1]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0xec]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xf1]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0xec]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xf1]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0xec]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xf1]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0xec]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xf1]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x16] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x17] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x75]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0xf]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x75]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0xf]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x75]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0xf]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x75]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0xf]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0x43]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0x30]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0x43]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0x30]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0x43]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0x30]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0x43]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0x30]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x18] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x19] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x26]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0x1b]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x26]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0x1b]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x26]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0x1b]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x26]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0x1b]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0x37]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xf8]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0x37]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xf8]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0x37]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xf8]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0x37]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xf8]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x1a] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x1b] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x13]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0xfa]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x13]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0xfa]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x13]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0xfa]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x13]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0xfa]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0xfa]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0x87]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0xfa]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0x87]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0xfa]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0x87]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0xfa]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0x87]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x1c] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x1d] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x48]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0x3f]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x48]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0x3f]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x48]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0x3f]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x48]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0x3f]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0x94]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 6]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0x94]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 6]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0x94]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 6]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0x94]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 6]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x1e] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x1f] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0xd0]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0xba]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0xd0]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0xba]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0xd0]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0xba]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0xd0]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0xba]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0xf2]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0x5e]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0xf2]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0x5e]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0xf2]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0x5e]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0xf2]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0x5e]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x20] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x21] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x30]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0x5b]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x30]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0x5b]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x30]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0x5b]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x30]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0x5b]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0x8b]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xae]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0x8b]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xae]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0x8b]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xae]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0x8b]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xae]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x22] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x23] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x54]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c)]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x54]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f)]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x54]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c)]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x54]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f)]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0x84]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0x8a]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0x84]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0x8a]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0x84]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0x8a]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0x84]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0x8a]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	mKey[0x24] = uVar4;
 	uVar4 = iVar3 + uVar4;
 	mKey[0x25] = (uVar4 >> 0x17) + uVar4 * 0x200;
-	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x15) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1d) ^ 0x23]] ^
-	                         *(byte *)((ulonglong)inData + 0xd)] ^
-	                  *(byte *)((ulonglong)inData + 5)] ^
-	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x14) ^
-	                                MDS[1][*(byte *)((ulonglong)inData + 0x1c) ^ 0x9d]] ^
-	                         *(byte *)((ulonglong)inData + 0xc)] ^
-	                  *(byte *)((ulonglong)inData + 4)] ^
-	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x16) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1e) ^ 0x23]] ^
-	                         *(byte *)((ulonglong)inData + 0xe)] ^
-	                  *(byte *)((ulonglong)inData + 6)] ^
-	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x17) ^
-	                                MDS[0][*(byte *)((ulonglong)inData + 0x1f) ^ 0x9d]] ^
-	                         *(byte *)((ulonglong)inData + 0xf)] ^
-	                  *(byte *)((ulonglong)inData + 7)];
+	uVar4 = MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x15) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1d) ^ 0x23]] ^
+	                         *(byte *)((size_t)inData + 0xd)] ^
+	                  *(byte *)((size_t)inData + 5)] ^
+	        MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x14) ^
+	                                MDS[1][*(byte *)((size_t)inData + 0x1c) ^ 0x9d]] ^
+	                         *(byte *)((size_t)inData + 0xc)] ^
+	                  *(byte *)((size_t)inData + 4)] ^
+	        MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x16) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1e) ^ 0x23]] ^
+	                         *(byte *)((size_t)inData + 0xe)] ^
+	                  *(byte *)((size_t)inData + 6)] ^
+	        MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x17) ^
+	                                MDS[0][*(byte *)((size_t)inData + 0x1f) ^ 0x9d]] ^
+	                         *(byte *)((size_t)inData + 0xf)] ^
+	                  *(byte *)((size_t)inData + 7)];
 	iVar3 = (uVar4 >> 0x18) + uVar4 * 0x100;
-	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((ulonglong)inData + 0x11) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x19) ^ 0xdf]] ^
-	                          *(byte *)((ulonglong)inData + 9)] ^
-	                   *(byte *)((ulonglong)inData + 1)] ^
-	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((ulonglong)inData + 0x10) ^
-	                                 MDS[1][*(byte *)((ulonglong)inData + 0x18) ^ 0xbc]] ^
-	                          *(byte *)((ulonglong)inData + 8)] ^
+	uVar4 = (MDS_GF_FD[MDS[0][MDS[1][*(byte *)((size_t)inData + 0x11) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x19) ^ 0xdf]] ^
+	                          *(byte *)((size_t)inData + 9)] ^
+	                   *(byte *)((size_t)inData + 1)] ^
+	         MDS_GF_FB[MDS[0][MDS[0][*(byte *)((size_t)inData + 0x10) ^
+	                                 MDS[1][*(byte *)((size_t)inData + 0x18) ^ 0xbc]] ^
+	                          *(byte *)((size_t)inData + 8)] ^
 	                   *(byte *)inData] ^
-	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((ulonglong)inData + 0x12) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1a) ^ 0xdf]] ^
-	                          *(byte *)((ulonglong)inData + 10)] ^
-	                   *(byte *)((ulonglong)inData + 2)] ^
-	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((ulonglong)inData + 0x13) ^
-	                                 MDS[0][*(byte *)((ulonglong)inData + 0x1b) ^ 0xbc]] ^
-	                          *(byte *)((ulonglong)inData + 0xb)] ^
-	                   *(byte *)((ulonglong)inData + 3)]) +
+	         MDS_GF_FE[MDS[1][MDS[0][*(byte *)((size_t)inData + 0x12) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1a) ^ 0xdf]] ^
+	                          *(byte *)((size_t)inData + 10)] ^
+	                   *(byte *)((size_t)inData + 2)] ^
+	         MDS_GF_FF[MDS[1][MDS[1][*(byte *)((size_t)inData + 0x13) ^
+	                                 MDS[0][*(byte *)((size_t)inData + 0x1b) ^ 0xbc]] ^
+	                          *(byte *)((size_t)inData + 0xb)] ^
+	                   *(byte *)((size_t)inData + 3)]) +
 	        iVar3;
 	uVar7 = iVar3 + uVar4;
 	mKey[0x26] = uVar4;
@@ -1333,14 +1333,14 @@ void CTwofish::Encrypt(const void *inData, void *outData)
 	undefined1 local_14;
 
 	uVar1 = *(byte *)inData ^ mKey[0];
-	uVar7 = *(uint *)((ulonglong)inData + 4) ^ mKey[1];
-	uVar2 = *(uint *)((ulonglong)inData + 0xc) ^ mKey[3];
+	uVar7 = *(uint *)((size_t)inData + 4) ^ mKey[1];
+	uVar2 = *(uint *)((size_t)inData + 0xc) ^ mKey[3];
 	uVar6 = mSBox[1][uVar7 & 0xff] ^ mSBox[2][uVar7 >> 8 & 0xff] ^ mSBox[3][uVar7 >> 0x10 & 0xff] ^
 	        mSBox[0][uVar7 >> 0x18];
 	iVar4 = (mSBox[1][uVar1 >> 8 & 0xff] ^ mSBox[0][uVar1 & 0xff] ^ mSBox[2][uVar1 >> 0x10 & 0xff] ^
 	         mSBox[3][uVar1 >> 0x18]) +
 	        uVar6;
-	uVar3 = *(uint *)((ulonglong)inData + 8) ^ mKey[2] ^ iVar4 + mKey[8];
+	uVar3 = *(uint *)((size_t)inData + 8) ^ mKey[2] ^ iVar4 + mKey[8];
 	uVar5 = uVar3 * -0x80000000 + (uVar3 >> 1);
 	uVar3 = uVar2 * 2 - ((int)uVar2 >> 0x1f) ^ uVar6 + iVar4 + mKey[9];
 	uVar2 = mSBox[1][uVar3 & 0xff] ^ mSBox[2][uVar3 >> 8 & 0xff] ^ mSBox[3][uVar3 >> 0x10 & 0xff] ^
@@ -1464,28 +1464,28 @@ void CTwofish::Encrypt(const void *inData, void *outData)
 	uVar1 = uVar1 ^ iVar4 + mKey[0x26];
 	uVar3 = uVar3 ^ mKey[4];
 	*(char *)outData = (char)uVar3;
-	*(char *)((ulonglong)outData + 1) = (char)(uVar3 >> 8);
-	*(char *)((ulonglong)outData + 2) = (char)(uVar3 >> 0x10);
-	*(char *)((ulonglong)outData + 3) = (char)(uVar3 >> 0x18);
+	*(char *)((size_t)outData + 1) = (char)(uVar3 >> 8);
+	*(char *)((size_t)outData + 2) = (char)(uVar3 >> 0x10);
+	*(char *)((size_t)outData + 3) = (char)(uVar3 >> 0x18);
 	uVar7 = uVar7 ^ mKey[5];
-	*(char *)((ulonglong)outData + 4) = (char)uVar7;
-	*(char *)((ulonglong)outData + 5) = (char)(uVar7 >> 8);
-	*(char *)((ulonglong)outData + 6) = (char)(uVar7 >> 0x10);
-	*(char *)((ulonglong)outData + 7) = (char)(uVar7 >> 0x18);
+	*(char *)((size_t)outData + 4) = (char)uVar7;
+	*(char *)((size_t)outData + 5) = (char)(uVar7 >> 8);
+	*(char *)((size_t)outData + 6) = (char)(uVar7 >> 0x10);
+	*(char *)((size_t)outData + 7) = (char)(uVar7 >> 0x18);
 	uVar7 = uVar1 * -0x80000000 + (uVar1 >> 1) ^ mKey[6];
 	local_14 = (undefined1)uVar7;
-	*(undefined1 *)((ulonglong)outData + 8) = local_14;
-	*(char *)((ulonglong)outData + 9) = (char)(uVar7 >> 8);
-	*(char *)((ulonglong)outData + 10) = (char)(uVar7 >> 0x10);
+	*(undefined1 *)((size_t)outData + 8) = local_14;
+	*(char *)((size_t)outData + 9) = (char)(uVar7 >> 8);
+	*(char *)((size_t)outData + 10) = (char)(uVar7 >> 0x10);
 	local_14 = (undefined1)(uVar7 >> 0x18);
-	*(undefined1 *)((ulonglong)outData + 0xb) = local_14;
+	*(undefined1 *)((size_t)outData + 0xb) = local_14;
 	uVar7 = uVar8 * 2 - ((int)uVar8 >> 0x1f) ^ uVar5 + iVar4 + uVar2 ^ mKey[7];
 	local_18 = (undefined1)uVar7;
-	*(undefined1 *)((ulonglong)outData + 0xc) = local_18;
-	*(char *)((ulonglong)outData + 0xd) = (char)(uVar7 >> 8);
-	*(char *)((ulonglong)outData + 0xe) = (char)(uVar7 >> 0x10);
+	*(undefined1 *)((size_t)outData + 0xc) = local_18;
+	*(char *)((size_t)outData + 0xd) = (char)(uVar7 >> 8);
+	*(char *)((size_t)outData + 0xe) = (char)(uVar7 >> 0x10);
 	local_18 = (undefined1)(uVar7 >> 0x18);
-	*(undefined1 *)((ulonglong)outData + 0xf) = local_18;
+	*(undefined1 *)((size_t)outData + 0xf) = local_18;
 	return;
 }
 
@@ -1504,21 +1504,21 @@ void CTwofish::EncryptCBC(void *outData, uint *ioPartialBlockSize, const void *i
 		inSize = 0x10 - uVar1;
 		if (inDataSize < inSize)
 		{
-			UMemory::Move((void *)((ulonglong)inData_00 + uVar1), inData, inDataSize);
+			UMemory::Move((void *)((size_t)inData_00 + uVar1), inData, inDataSize);
 			*ioPartialBlockSize = uVar1 + inDataSize;
 			return;
 		}
-		UMemory::Move((void *)((ulonglong)inData_00 + uVar1), inData, inSize);
+		UMemory::Move((void *)((size_t)inData_00 + uVar1), inData, inSize);
 		inDataSize = inDataSize - inSize;
-		inData = (void *)((ulonglong)inData + inSize);
+		inData = (void *)((size_t)inData + inSize);
 		EncryptCBCIteration(inData_00, inData_00);
-		inData_00 = (void *)((ulonglong)inData_00 + 0x10);
+		inData_00 = (void *)((size_t)inData_00 + 0x10);
 	}
 	for (uVar1 = inDataSize >> 4; uVar1 != 0; uVar1 = uVar1 - 1)
 	{
 		EncryptCBCIteration(inData, inData_00);
-		inData = (void *)((ulonglong)inData + 0x10);
-		inData_00 = (void *)((ulonglong)inData_00 + 0x10);
+		inData = (void *)((size_t)inData + 0x10);
+		inData_00 = (void *)((size_t)inData_00 + 0x10);
 	}
 	UMemory::Move(inData_00, inData, inDataSize & 0xf);
 	*(void **)outData = inData_00;
@@ -1540,14 +1540,14 @@ void CTwofish::EncryptCBCIteration(const void *inData, void *outData)
 	undefined1 local_14;
 
 	uVar7 = *(byte *)inData ^ mKey[4];
-	uVar4 = *(uint *)((ulonglong)inData + 4) ^ mKey[5];
-	uVar1 = *(uint *)((ulonglong)inData + 8) ^ mKey[6];
+	uVar4 = *(uint *)((size_t)inData + 4) ^ mKey[5];
+	uVar1 = *(uint *)((size_t)inData + 8) ^ mKey[6];
 	uVar2 = mSBox[1][uVar4 & 0xff] ^ mSBox[2][uVar4 >> 8 & 0xff] ^ mSBox[3][uVar4 >> 0x10 & 0xff] ^
 	        mSBox[0][uVar4 >> 0x18];
 	iVar6 = (mSBox[1][uVar7 >> 8 & 0xff] ^ mSBox[0][uVar7 & 0xff] ^ mSBox[2][uVar7 >> 0x10 & 0xff] ^
 	         mSBox[3][uVar7 >> 0x18]) +
 	        uVar2;
-	uVar2 = *(uint *)((ulonglong)inData + 0xc) ^ mKey[7] ^ uVar2 + iVar6 + mKey[0x27];
+	uVar2 = *(uint *)((size_t)inData + 0xc) ^ mKey[7] ^ uVar2 + iVar6 + mKey[0x27];
 	uVar2 = uVar2 * -0x80000000 + (uVar2 >> 1);
 	uVar3 = uVar1 * 2 - ((int)uVar1 >> 0x1f) ^ iVar6 + mKey[0x26];
 	uVar1 = mSBox[1][uVar2 & 0xff] ^ mSBox[2][uVar2 >> 8 & 0xff] ^ mSBox[3][uVar2 >> 0x10 & 0xff] ^
@@ -1671,27 +1671,27 @@ void CTwofish::EncryptCBCIteration(const void *inData, void *outData)
 	uVar1 = uVar1 ^ mKey[0];
 	uVar7 = mKey[8];
 	*(char *)outData = (char)uVar1;
-	*(char *)((ulonglong)outData + 1) = (char)(uVar1 >> 8);
-	*(char *)((ulonglong)outData + 2) = (char)(uVar1 >> 0x10);
-	*(char *)((ulonglong)outData + 3) = (char)(uVar1 >> 0x18);
+	*(char *)((size_t)outData + 1) = (char)(uVar1 >> 8);
+	*(char *)((size_t)outData + 2) = (char)(uVar1 >> 0x10);
+	*(char *)((size_t)outData + 3) = (char)(uVar1 >> 0x18);
 	uVar4 = uVar4 ^ mKey[1];
 	local_24 = (undefined1)uVar4;
-	*(undefined1 *)((ulonglong)outData + 4) = local_24;
-	*(char *)((ulonglong)outData + 5) = (char)(uVar4 >> 8);
-	*(char *)((ulonglong)outData + 6) = (char)(uVar4 >> 0x10);
+	*(undefined1 *)((size_t)outData + 4) = local_24;
+	*(char *)((size_t)outData + 5) = (char)(uVar4 >> 8);
+	*(char *)((size_t)outData + 6) = (char)(uVar4 >> 0x10);
 	local_24 = (undefined1)(uVar4 >> 0x18);
-	*(undefined1 *)((ulonglong)outData + 7) = local_24;
+	*(undefined1 *)((size_t)outData + 7) = local_24;
 	uVar7 = uVar3 * 2 - ((int)uVar3 >> 0x1f) ^ iVar6 + uVar7 ^ mKey[2];
-	*(char *)((ulonglong)outData + 8) = (char)uVar7;
-	*(char *)((ulonglong)outData + 9) = (char)(uVar7 >> 8);
-	*(char *)((ulonglong)outData + 10) = (char)(uVar7 >> 0x10);
-	*(char *)((ulonglong)outData + 0xb) = (char)(uVar7 >> 0x18);
+	*(char *)((size_t)outData + 8) = (char)uVar7;
+	*(char *)((size_t)outData + 9) = (char)(uVar7 >> 8);
+	*(char *)((size_t)outData + 10) = (char)(uVar7 >> 0x10);
+	*(char *)((size_t)outData + 0xb) = (char)(uVar7 >> 0x18);
 	uVar7 = uVar2 * -0x80000000 + (uVar2 >> 1) ^ mKey[3];
 	local_14 = (undefined1)uVar7;
-	*(undefined1 *)((ulonglong)outData + 0xc) = local_14;
-	*(char *)((ulonglong)outData + 0xd) = (char)(uVar7 >> 8);
-	*(char *)((ulonglong)outData + 0xe) = (char)(uVar7 >> 0x10);
+	*(undefined1 *)((size_t)outData + 0xc) = local_14;
+	*(char *)((size_t)outData + 0xd) = (char)(uVar7 >> 8);
+	*(char *)((size_t)outData + 0xe) = (char)(uVar7 >> 0x10);
 	local_14 = (undefined1)(uVar7 >> 0x18);
-	*(undefined1 *)((ulonglong)outData + 0xf) = local_14;
+	*(undefined1 *)((size_t)outData + 0xf) = local_14;
 	return;
 }

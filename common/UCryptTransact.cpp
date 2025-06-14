@@ -15,12 +15,12 @@ void UCryptTransact::BlockCrypt6E7DFD34(void *ioData, bool inIsDecrypt)
 	uint uVar8;
 
 	uVar8 = *(uint *)ioData;
-	uVar1 = *(uint *)((ulonglong)ioData + 4);
+	uVar1 = *(uint *)((size_t)ioData + 4);
 	uVar6 = (uVar8 & 0xff00) << 8 | uVar8 >> 0x18 | uVar8 >> 8 & 0xff00 | uVar8 << 0x18;
-	uVar7 = *(uint *)((ulonglong)ioData + 8);
+	uVar7 = *(uint *)((size_t)ioData + 8);
 	uVar3 = (uVar1 & 0xff00) << 8 | uVar1 >> 0x18 | uVar1 >> 8 & 0xff00;
 	uVar4 = uVar3 | uVar1 << 0x18;
-	uVar1 = *(uint *)((ulonglong)ioData + 0xc);
+	uVar1 = *(uint *)((size_t)ioData + 0xc);
 	uVar2 = (uVar7 & 0xff00) << 8 | uVar7 >> 0x18 | uVar7 >> 8 & 0xff00 | uVar7 << 0x18;
 	uVar5 = (uVar1 & 0xff00) << 8 | uVar1 >> 0x18 | uVar1 >> 8 & 0xff00 | uVar1 << 0x18;
 	if (inIsDecrypt)
@@ -29,13 +29,13 @@ void UCryptTransact::BlockCrypt6E7DFD34(void *ioData, bool inIsDecrypt)
 		uVar7 = (uVar2 >> 6 | (uVar7 >> 0x18) << 0x1a) ^ 0xe152da04;
 		*(uint *)ioData =
 		    (uVar3 & 0xff00) << 8 | uVar3 >> 0x18 | uVar3 >> 8 & 0xff00 | uVar3 << 0x18;
-		*(uint *)((ulonglong)ioData + 4) =
+		*(uint *)((size_t)ioData + 4) =
 		    (uVar7 & 0xff00) << 8 | uVar7 >> 0x18 | uVar7 >> 8 & 0xff00 | uVar7 << 0x18;
 		uVar8 = ((uVar8 << 0x18) >> 0x19 | uVar6 << 7) ^ 0xa95a759b;
-		*(uint *)((ulonglong)ioData + 8) =
+		*(uint *)((size_t)ioData + 8) =
 		    (uVar8 & 0xff00) << 8 | uVar8 >> 0x18 | uVar8 >> 8 & 0xff00 | uVar8 << 0x18;
 		uVar8 = ((uVar1 >> 0x18) << 0x1d | uVar5 >> 3) ^ 0x6992e25;
-		*(uint *)((ulonglong)ioData + 0xc) =
+		*(uint *)((size_t)ioData + 0xc) =
 		    (uVar8 & 0xff00) << 8 | uVar8 >> 0x18 | uVar8 >> 8 & 0xff00 | uVar8 << 0x18;
 	}
 	else
@@ -50,13 +50,13 @@ void UCryptTransact::BlockCrypt6E7DFD34(void *ioData, bool inIsDecrypt)
 		uVar4 = uVar4 ^ 0xe152da04;
 		uVar7 = uVar4 << 6;
 		uVar8 = (uVar5 ^ 0x6992e25) * 8;
-		*(uint *)((ulonglong)ioData + 4) =
+		*(uint *)((size_t)ioData + 4) =
 		    (uVar6 & 0xff00) << 8 | uVar3 >> 0x18 | (uVar6 | uVar3) >> 8 & 0xff00 | uVar6 << 0x18;
-		*(uint *)((ulonglong)ioData + 8) = (uVar7 & 0xff00) << 8 | uVar7 >> 0x18 |
-		                                   uVar7 >> 8 & 0xff00 | (uVar7 | uVar4 >> 0x1a) << 0x18;
-		*(uint *)((ulonglong)ioData + 0xc) = (uVar8 & 0xff00) << 8 | uVar8 >> 0x18 |
-		                                     uVar8 >> 8 & 0xff00 |
-		                                     ((uVar1 << 0x18) >> 0x1d | uVar8) << 0x18;
+		*(uint *)((size_t)ioData + 8) = (uVar7 & 0xff00) << 8 | uVar7 >> 0x18 |
+		                                uVar7 >> 8 & 0xff00 | (uVar7 | uVar4 >> 0x1a) << 0x18;
+		*(uint *)((size_t)ioData + 0xc) = (uVar8 & 0xff00) << 8 | uVar8 >> 0x18 |
+		                                  uVar8 >> 8 & 0xff00 |
+		                                  ((uVar1 << 0x18) >> 0x1d | uVar8) << 0x18;
 	}
 	return;
 }
@@ -70,22 +70,22 @@ void UCryptTransact::GenerateKey(const void *inData, uint inDataSize, void *outD
 	if (inDataSize == 0)
 	{
 		*(undefined4 *)outData = 0xeea339da;
-		*(undefined4 *)((ulonglong)outData + 4) = 0x6ebeaeca;
-		*(undefined4 *)((ulonglong)outData + 8) = 0xd4b6b5e;
-		*(undefined4 *)((ulonglong)outData + 0xc) = 0xba298eba;
-		*(undefined4 *)((ulonglong)outData + 0x10) = 0xefbf5532;
-		*(undefined4 *)((ulonglong)outData + 0x14) = 0xc4b5a218;
-		*(undefined4 *)((ulonglong)outData + 0x18) = 0x90186095;
-		*(undefined4 *)((ulonglong)outData + 0x1c) = 0x907d8af;
+		*(undefined4 *)((size_t)outData + 4) = 0x6ebeaeca;
+		*(undefined4 *)((size_t)outData + 8) = 0xd4b6b5e;
+		*(undefined4 *)((size_t)outData + 0xc) = 0xba298eba;
+		*(undefined4 *)((size_t)outData + 0x10) = 0xefbf5532;
+		*(undefined4 *)((size_t)outData + 0x14) = 0xc4b5a218;
+		*(undefined4 *)((size_t)outData + 0x18) = 0x90186095;
+		*(undefined4 *)((size_t)outData + 0x1c) = 0x907d8af;
 		return;
 	}
 	local_90.Init();
 	local_90.Update(inData, inDataSize);
 	local_90.Report(outData);
-	*(undefined4 *)((ulonglong)outData + 0x14) = *(uint *)outData;
-	*(undefined4 *)((ulonglong)outData + 0x18) = *(undefined4 *)((ulonglong)outData + 4);
+	*(undefined4 *)((size_t)outData + 0x14) = *(uint *)outData;
+	*(undefined4 *)((size_t)outData + 0x18) = *(undefined4 *)((size_t)outData + 4);
 	uVar1 = UMemory::Checksum(inData, inDataSize, 1);
-	*(uint *)((ulonglong)outData + 0x1c) =
+	*(uint *)((size_t)outData + 0x1c) =
 	    (uVar1 & 0xff00) << 8 | uVar1 >> 0x18 | uVar1 >> 8 & 0xff00 | uVar1 << 0x18;
 	return;
 }
@@ -118,35 +118,35 @@ void UCryptTransact::TCPPacketCrypt(uint inInit, void *ioData, uint inDataSize)
 			do
 			{
 				uVar2 = inInit * 2 + 0x4878;
-				puVar1 = (uint *)((ulonglong)ioData + uVar3 * 4);
+				puVar1 = (uint *)((size_t)ioData + uVar3 * 4);
 				*puVar1 = *puVar1 ^ ((uVar2 & 0xff00) << 8 | uVar2 >> 0x18 | uVar2 >> 8 & 0xff00 |
 				                     uVar2 * 0x1000000);
 				uVar2 = uVar2 * 2 + 0x4878;
-				puVar1 = (uint *)((ulonglong)ioData + uVar3 * 4 + 4);
+				puVar1 = (uint *)((size_t)ioData + uVar3 * 4 + 4);
 				*puVar1 = *puVar1 ^ ((uVar2 & 0xff00) << 8 | uVar2 >> 0x18 | uVar2 >> 8 & 0xff00 |
 				                     uVar2 * 0x1000000);
 				uVar2 = uVar2 * 2 + 0x4878;
-				puVar1 = (uint *)((ulonglong)ioData + uVar3 * 4 + 8);
+				puVar1 = (uint *)((size_t)ioData + uVar3 * 4 + 8);
 				*puVar1 = *puVar1 ^ ((uVar2 & 0xff00) << 8 | uVar2 >> 0x18 | uVar2 >> 8 & 0xff00 |
 				                     uVar2 * 0x1000000);
 				uVar2 = uVar2 * 2 + 0x4878;
-				puVar1 = (uint *)((ulonglong)ioData + uVar3 * 4 + 0xc);
+				puVar1 = (uint *)((size_t)ioData + uVar3 * 4 + 0xc);
 				*puVar1 = *puVar1 ^ ((uVar2 & 0xff00) << 8 | uVar2 >> 0x18 | uVar2 >> 8 & 0xff00 |
 				                     uVar2 * 0x1000000);
 				uVar2 = uVar2 * 2 + 0x4878;
-				puVar1 = (uint *)((ulonglong)ioData + uVar3 * 4 + 0x10);
+				puVar1 = (uint *)((size_t)ioData + uVar3 * 4 + 0x10);
 				*puVar1 = *puVar1 ^ ((uVar2 & 0xff00) << 8 | uVar2 >> 0x18 | uVar2 >> 8 & 0xff00 |
 				                     uVar2 * 0x1000000);
 				uVar2 = uVar2 * 2 + 0x4878;
-				puVar1 = (uint *)((ulonglong)ioData + uVar3 * 4 + 0x14);
+				puVar1 = (uint *)((size_t)ioData + uVar3 * 4 + 0x14);
 				*puVar1 = *puVar1 ^ ((uVar2 & 0xff00) << 8 | uVar2 >> 0x18 | uVar2 >> 8 & 0xff00 |
 				                     uVar2 * 0x1000000);
 				uVar2 = uVar2 * 2 + 0x4878;
-				puVar1 = (uint *)((ulonglong)ioData + uVar3 * 4 + 0x18);
+				puVar1 = (uint *)((size_t)ioData + uVar3 * 4 + 0x18);
 				*puVar1 = *puVar1 ^ ((uVar2 & 0xff00) << 8 | uVar2 >> 0x18 | uVar2 >> 8 & 0xff00 |
 				                     uVar2 * 0x1000000);
 				inInit = uVar2 * 2 + 0x4878;
-				puVar1 = (uint *)((ulonglong)ioData + uVar3 * 4 + 0x1c);
+				puVar1 = (uint *)((size_t)ioData + uVar3 * 4 + 0x1c);
 				*puVar1 = *puVar1 ^ ((inInit & 0xff00) << 8 | inInit >> 0x18 |
 				                     inInit >> 8 & 0xff00 | inInit * 0x1000000);
 				uVar3 = uVar3 + 8;
@@ -155,7 +155,7 @@ void UCryptTransact::TCPPacketCrypt(uint inInit, void *ioData, uint inDataSize)
 		for (; uVar3 < uVar4; uVar3 = uVar3 + 1)
 		{
 			inInit = inInit * 2 + 0x4878;
-			puVar1 = (uint *)((ulonglong)ioData + uVar3 * 4);
+			puVar1 = (uint *)((size_t)ioData + uVar3 * 4);
 			*puVar1 = *puVar1 ^ ((inInit & 0xff00) << 8 | inInit >> 0x18 | inInit >> 8 & 0xff00 |
 			                     inInit * 0x1000000);
 		}

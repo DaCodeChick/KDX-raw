@@ -10,14 +10,14 @@ void CVoidPtrList::AddBackItem(void *inPtr)
 	if (inPtr != NULL)
 	{
 		pvVar1 = mOffset;
-		*(undefined4 *)((ulonglong)inPtr + (ulonglong)pvVar1) = 0;
+		*(undefined4 *)((size_t)inPtr + (size_t)pvVar1) = 0;
 		if (mTail == NULL)
 		{
 			mHead = inPtr;
 		}
 		else
 		{
-			*(void **)((ulonglong)mTail + (ulonglong)pvVar1) = inPtr;
+			*(void **)((size_t)mTail + (size_t)pvVar1) = inPtr;
 		}
 		mTail = inPtr;
 		mCount = mCount + 1;
@@ -34,7 +34,7 @@ void CVoidPtrList::AddFrontItem(void *inPtr)
 	if (inPtr != NULL)
 	{
 		pvVar1 = mHead;
-		*(void **)((ulonglong)inPtr + (ulonglong)mOffset) = pvVar1;
+		*(void **)((size_t)inPtr + (size_t)mOffset) = pvVar1;
 		mHead = inPtr;
 		if (pvVar1 == NULL)
 		{
@@ -60,14 +60,14 @@ void *CVoidPtrList::AddItem(void *inPtr, uint inSize)
 	pvVar1 = mTail;
 	if (inSize != 0)
 	{
-		inSize_00 = (void *)((ulonglong)pvVar1 + inSize);
+		inSize_00 = (void *)((size_t)pvVar1 + inSize);
 		if (mOffset < inSize_00)
 		{
-			Preallocate((ulonglong)inSize_00, 1);
+			Preallocate((size_t)inSize_00, 1);
 		}
 		if (inPtr != NULL)
 		{
-			UMemory::Move((void *)((ulonglong)mHead + (ulonglong)pvVar1), inPtr, inSize);
+			UMemory::Move((void *)((size_t)mHead + (size_t)pvVar1), inPtr, inSize);
 		}
 		mTail = inSize_00;
 	}
@@ -87,10 +87,10 @@ void *CVoidPtrList::AddItem(void *inPtr)
 	pvVar1 = mTail;
 	if (mOffset <= pvVar1)
 	{
-		Preallocate((ulonglong)pvVar1 + 1U, 4);
+		Preallocate((size_t)pvVar1 + 1U, 4);
 	}
-	*(void **)((ulonglong)mHead + (ulonglong)pvVar1 * 4) = inPtr;
-	mTail = (void *)((ulonglong)pvVar1 + 1U);
+	*(void **)((size_t)mHead + (size_t)pvVar1 * 4) = inPtr;
+	mTail = (void *)((size_t)pvVar1 + 1U);
 	return pvVar1;
 }
 
@@ -113,15 +113,14 @@ void *CVoidPtrList::InsertItem(void *inOffset, void *inPtr, uint inSize)
 	}
 	if (inSize != 0)
 	{
-		inSize_00 = (void *)((ulonglong)pvVar1 + inSize);
+		inSize_00 = (void *)((size_t)pvVar1 + inSize);
 		if (mOffset < inSize_00)
 		{
 			pvVar1 = (void *)0x1;
-			Preallocate((ulonglong)inSize_00, 1);
+			Preallocate((size_t)inSize_00, 1);
 		}
-		inSrc = (void *)((ulonglong)mHead + (ulonglong)inOffset);
-		UMemory::Move((void *)((ulonglong)inSrc + inSize), inSrc,
-		              (ulonglong)pvVar1 - (ulonglong)inOffset);
+		inSrc = (void *)((size_t)mHead + (size_t)inOffset);
+		UMemory::Move((void *)((size_t)inSrc + inSize), inSrc, (size_t)pvVar1 - (size_t)inOffset);
 		if (inPtr != NULL)
 		{
 			UMemory::Move(inSrc, inPtr, inSize);
@@ -150,15 +149,14 @@ void *CVoidPtrList::InsertItem(void *inPtr, uint inIndex, byte inFillValue)
 	}
 	if (inIndex != 0)
 	{
-		inSize = (void *)((ulonglong)pvVar1 + inIndex);
+		inSize = (void *)((size_t)pvVar1 + inIndex);
 		if (mOffset < inSize)
 		{
 			pvVar1 = (void *)0x1;
-			Preallocate((ulonglong)inSize, 1);
+			Preallocate((size_t)inSize, 1);
 		}
-		inSrc = (void *)((ulonglong)mHead + (ulonglong)inPtr);
-		UMemory::Move((void *)((ulonglong)inSrc + inIndex), inSrc,
-		              (ulonglong)pvVar1 - (ulonglong)inPtr);
+		inSrc = (void *)((size_t)mHead + (size_t)inPtr);
+		UMemory::Move((void *)((size_t)inSrc + inIndex), inSrc, (size_t)pvVar1 - (size_t)inPtr);
 		UMemory::Fill(inSrc, inIndex, inFillValue);
 		mTail = inSize;
 	}
@@ -181,7 +179,7 @@ bool CVoidPtrList::IsInList(const void *inPtr) const
 			}
 			if (pvVar1 == inPtr)
 				break;
-			pvVar1 = *(void **)((ulonglong)pvVar1 + (ulonglong)mOffset);
+			pvVar1 = *(void **)((size_t)pvVar1 + (size_t)mOffset);
 		}
 		return true;
 	}
@@ -198,7 +196,7 @@ void *CVoidPtrList::PopFront()
 	pvVar1 = mHead;
 	if (pvVar1 != NULL)
 	{
-		piVar3 = (int *)((ulonglong)pvVar1 + (ulonglong)mOffset);
+		piVar3 = (int *)((size_t)pvVar1 + (size_t)mOffset);
 		pvVar2 = (void *)*piVar3;
 		*piVar3 = 0;
 		mHead = pvVar2;
@@ -276,10 +274,10 @@ void __cdecl CVoidPtrList::Preallocate(uint inSize)
 	{
 		__Fail(0x10002);
 	}
-	inSize_00 = (void *)((ulonglong)mTail + inSize);
+	inSize_00 = (void *)((size_t)mTail + inSize);
 	if (mOffset < inSize_00)
 	{
-		Preallocate((ulonglong)inSize_00, 4);
+		Preallocate((size_t)inSize_00, 4);
 	}
 	return;
 }
@@ -295,18 +293,17 @@ void *CVoidPtrList::RemoveItem(void *inPtr, uint inSize)
 	{
 		return pvVar1;
 	}
-	if ((pvVar1 < (void *)((ulonglong)inPtr + inSize)) ||
-	    ((void *)((ulonglong)inPtr + inSize) < inPtr))
+	if ((pvVar1 < (void *)((size_t)inPtr + inSize)) || ((void *)((size_t)inPtr + inSize) < inPtr))
 	{
-		inSize = (ulonglong)pvVar1 - (ulonglong)inPtr;
+		inSize = (size_t)pvVar1 - (size_t)inPtr;
 	}
 	if (inSize != 0)
 	{
-		ioDest = (void *)((ulonglong)mHead + (ulonglong)inPtr);
-		UMemory::Move(ioDest, (void *)(inSize + (ulonglong)ioDest),
-		              (ulonglong)pvVar1 - ((ulonglong)inPtr + inSize));
-		mTail = (void *)((ulonglong)pvVar1 - inSize);
-		Preallocate((ulonglong)pvVar1 - inSize, 1);
+		ioDest = (void *)((size_t)mHead + (size_t)inPtr);
+		UMemory::Move(ioDest, (void *)(inSize + (size_t)ioDest),
+		              (size_t)pvVar1 - ((size_t)inPtr + inSize));
+		mTail = (void *)((size_t)pvVar1 - inSize);
+		Preallocate((size_t)pvVar1 - inSize, 1);
 	}
 	return inPtr;
 }
@@ -333,18 +330,18 @@ bool CVoidPtrList::RemoveItem(void *inPtr)
 			}
 			if (pvVar3 == inPtr)
 				break;
-			pvVar2 = *(void **)((ulonglong)pvVar3 + (ulonglong)pvVar1);
+			pvVar2 = *(void **)((size_t)pvVar3 + (size_t)pvVar1);
 			pvVar4 = pvVar3;
 		}
-		pvVar2 = *(void **)((ulonglong)pvVar3 + (ulonglong)pvVar1);
-		*(ulonglong *)((ulonglong)pvVar3 + (ulonglong)pvVar1) = 0;
+		pvVar2 = *(void **)((size_t)pvVar3 + (size_t)pvVar1);
+		*(size_t *)((size_t)pvVar3 + (size_t)pvVar1) = 0;
 		if (pvVar4 == NULL)
 		{
 			mHead = pvVar2;
 		}
 		else
 		{
-			*(void **)((ulonglong)pvVar4 + (ulonglong)pvVar1) = pvVar2;
+			*(void **)((size_t)pvVar4 + (size_t)pvVar1) = pvVar2;
 		}
 		if (pvVar2 == NULL)
 		{

@@ -2,18 +2,20 @@
 
 #include "typedefs.h"
 
+/// @brief A point structure that defines a point in 2D space.
 struct EXPORT SPoint
 {
-	int x, y;
+	int x; ///< The x-coordinate of the point.
+	int y; ///< The y-coordinate of the point.
 };
 
 /// @brief A rectangle structure that defines a rectangular area in 2D space.
 struct EXPORT SRect
 {
-	int left;   /// The x-coordinate of the left edge of the rectangle.
-	int right;  /// The x-coordinate of the right edge of the rectangle.
-	int top;    /// The y-coordinate of the top edge of the rectangle.
-	int bottom; /// The y-coordinate of the bottom edge of the rectangle.
+	int left;   ///< The x-coordinate of the left edge of the rectangle.
+	int right;  ///< The x-coordinate of the right edge of the rectangle.
+	int top;    ///< The y-coordinate of the top edge of the rectangle.
+	int bottom; ///< The y-coordinate of the bottom edge of the rectangle.
 
 	/**
 	 * @brief Aligns the rectangle with the specified reference rectangle.
@@ -35,14 +37,14 @@ struct EXPORT SRect
 	/**
 	 * @brief Centers the rectangle horizontally within the specified base rectangle.
 	 *
-	 * @param inBase
+	 * @param inBase The base rectangle to center within.
 	 */
 	void CenterHoriz(const SRect *inBase);
 
 	/**
 	 * @brief Constrains the rectangle to fit within the specified rectangle.
 	 *
-	 * @param inRect
+	 * @param inRect The rectangle to constrain the current rectangle within.
 	 */
 	void Constrain(const SRect *inRect);
 
@@ -58,8 +60,8 @@ struct EXPORT SRect
 	/**
 	 * @brief Calculates the union of two rectangles and stores the result in the current rectangle.
 	 *
-	 * @param inRectA
-	 * @param inRectB
+	 * @param inRectA The first rectangle.
+	 * @param inRectB The second rectangle.
 	 * @return true if the union was successfully calculated, false if the rectangles do not
 	 * intersect.
 	 */
@@ -68,7 +70,7 @@ struct EXPORT SRect
 	/**
 	 * @brief Checks if the rectangle intersects with another rectangle.
 	 *
-	 * @param inRect
+	 * @param inRect The rectangle to check for intersection.
 	 * @return true if the rectangles intersect, false otherwise.
 	 */
 	bool Intersects(const SRect *inRect) const;
@@ -78,14 +80,12 @@ struct EXPORT SRect
 	 * coordinates.
 	 *
 	 * @param inRect
-	 * @param inLeft
-	 * @param inTop
+	 * @param inLeft The new left coordinate of the rectangle.
+	 * @param inTop The new top coordinate of the rectangle.
 	 */
 	void MoveTo(const SRect *inRect, int inLeft, int inTop);
 
-	/**
-	 * @brief Validates the rectangle's dimensions.
-	 */
+	/// @brief Validates the rectangle's dimensions.
 	void Validate();
 };
 
