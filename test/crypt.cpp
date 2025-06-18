@@ -1,9 +1,9 @@
 #include <cstring>
 #include <gtest/gtest.h>
 
-#include "../common/UCryptTransact.h"
-#include "../common/UDigest.h"
-#include "../common/UMemory.h"
+#include "../AppWarrior/UCryptTransact.h"
+#include "../AppWarrior/UDigest.h"
+#include "../AppWarrior/UMemory.h"
 
 TEST(Crypt, GenerateKey)
 {

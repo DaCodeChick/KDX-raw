@@ -1,7 +1,7 @@
 #include <cstring>
 #include <gtest/gtest.h>
 
-#include "../common/CTokenizer.h"
+#include "../AppWarrior/CTokenizer.h"
 
 TEST(Tokenizer, Default)
 {

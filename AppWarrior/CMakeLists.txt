@@ -46,7 +46,7 @@ set(HEADERS
 )
 
 add_library(
-	Haxial SHARED
+	AppWarrior SHARED
 	${SOURCES}
 	${HEADERS}
 )

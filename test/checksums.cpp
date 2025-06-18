@@ -1,7 +1,7 @@
 #include <cstring>
 #include <gtest/gtest.h>
 
-#include "../common/UMemory.h"
+#include "../AppWarrior/UMemory.h"
 
 TEST(Checksums, Adler)
 {

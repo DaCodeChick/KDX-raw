@@ -1,9 +1,9 @@
 #include <cstring>
 #include <gtest/gtest.h>
 
-#include "../common/CTwofish.h"
-#include "../common/UCryptTransact.h"
-#include "../common/UMemory.h"
+#include "../AppWarrior/CTwofish.h"
+#include "../AppWarrior/UCryptTransact.h"
+#include "../AppWarrior/UMemory.h"
 
 TEST(Twofish, EncryptCBC)
 {

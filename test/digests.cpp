@@ -1,8 +1,8 @@
 #include <cstring>
 #include <gtest/gtest.h>
 
-#include "../common/UDigest.h"
-#include "../common/UMemory.h"
+#include "../AppWarrior/UDigest.h"
+#include "../AppWarrior/UMemory.h"
 
 TEST(Digests, MD5)
 {

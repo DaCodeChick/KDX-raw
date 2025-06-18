@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../common/CPtrList.h"
+#include "../AppWarrior/CPtrList.h"
 
 struct BanRecord
 {
