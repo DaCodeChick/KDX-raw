@@ -5,7 +5,7 @@
 /// @brief Structure representing an error.
 struct SError
 {
-	uint id; /// Unique identifier for the error
+	uint id; ///< Unique identifier for the error
 	uint field1_0x4;
 	uint field2_0x8;
 	uint field3_0xc;
