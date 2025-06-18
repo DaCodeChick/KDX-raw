@@ -1,4 +1,5 @@
 #include "UText.h"
+#include "UError.h"
 
 // AppearanceEdit.exe: 00461428
 static const byte __lower_map[256] = {
@@ -38,8 +39,90 @@ static const byte __upper_map[256] = {
     0xc0, 0xc1, 0xc2, 0xc3, 0xc4, 0xc5, 0xc6, 0xc7, 0xc8, 0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xcf,
     0xd0, 0xd1, 0xd2, 0xd3, 0xd4, 0xd5, 0xd6, 0xf7, 0xd8, 0xd9, 0xda, 0xdb, 0xdc, 0xdd, 0xde, 0x9f};
 
+// KDXTracker.exe: 00412dc0
+uint UText::DecodeUTF8Char(const void *inText, size_t inSize, size_t *outSize)
+{
+	byte bVar1;
+	uint uVar2;
+	uint uVar3;
+
+	if (inSize == 0)
+	{
+		uVar3 = 0;
+		uVar2 = 0;
+		goto LAB_00412ed1;
+	}
+	bVar1 = *(byte *)inText;
+	uVar2 = (uint)bVar1;
+	if ((bVar1 & 0x80) == 0)
+	{
+		uVar2 = (uint)bVar1;
+	}
+	else if ((bVar1 & 0x40) == 0)
+	{
+		uVar2 = 0xfffd;
+	}
+	else
+	{
+		if ((bVar1 & 0x20) == 0)
+		{
+			if (inSize < 2)
+			{
+			LAB_00412ee0:
+				if (outSize != NULL)
+				{
+					*outSize = inSize;
+				}
+				return 0xfffd;
+			}
+			uVar2 = (uVar2 & 0x1f) << 6 | *(byte *)((size_t)inText + 1) & 0x3f;
+			if (uVar2 < 0x80)
+			{
+				uVar2 = 0xfffd;
+			}
+			uVar3 = 2;
+			goto LAB_00412ed1;
+		}
+		if ((bVar1 & 0x10) == 0)
+		{
+			if (inSize < 3)
+				goto LAB_00412ee0;
+			uVar2 = (*(byte *)((size_t)inText + 1) & 0x3f) << 6 | (uVar2 & 0xf) << 0xc |
+			        *(byte *)((size_t)inText + 2) & 0x3f;
+			if (uVar2 < 0x800)
+			{
+				uVar2 = 0xfffd;
+			}
+			uVar3 = 3;
+			goto LAB_00412ed1;
+		}
+		if ((bVar1 & 8) == 0)
+		{
+			if (inSize < 4)
+				goto LAB_00412ee0;
+			uVar2 = (*(byte *)((size_t)inText + 1) & 0x3f) << 0xc | (uVar2 & 7) << 0x12 |
+			        (*(byte *)((size_t)inText + 2) & 0x3f) << 6 |
+			        *(byte *)((size_t)inText + 3) & 0x3f;
+			if (uVar2 < 0x10000)
+			{
+				uVar2 = 0xfffd;
+			}
+			uVar3 = 4;
+			goto LAB_00412ed1;
+		}
+		uVar2 = 0xfffd;
+	}
+	uVar3 = 1;
+LAB_00412ed1:
+	if (outSize != NULL)
+	{
+		*outSize = uVar3;
+	}
+	return uVar2;
+}
+
 // AppearanceEdit.exe: 004438f0
-bool UText::Equal(const char *inTextA, const char *inTextB, uint inSize)
+bool UText::Equal(const char *inTextA, const char *inTextB, size_t inSize)
 {
 	short *psVar1;
 	short *psVar2;
@@ -51,8 +134,8 @@ bool UText::Equal(const char *inTextA, const char *inTextB, uint inSize)
 	}
 	if ((inTextA != NULL) && (inTextB != NULL))
 	{
-		uVar3 = -(longlong)inTextA & 7;
-		if (uVar3 != (-(longlong)inTextB & 7U))
+		uVar3 = -(size_t)inTextA & 7;
+		if (uVar3 != (-(size_t)inTextB & 7U))
 		{
 			uVar3 = 0;
 			if (inSize != 0)
@@ -139,6 +222,20 @@ bool UText::Equal(const char *inTextA, const char *inTextB, uint inSize)
 }
 
 // AppearanceEdit.exe: 004335e0
+bool UText::IsAlphaNumeric(uint inChar)
+{
+	bool bVar1;
+
+	bVar1 = true;
+	if ((((inChar < 0x30) || (0x39 < inChar)) && ((inChar < 0x41 || (0x46 < inChar)))) &&
+	    ((inChar < 0x61 || (0x66 < inChar))))
+	{
+		bVar1 = false;
+	}
+	return bVar1;
+}
+
+// AppearanceEdit.exe: 004335e0
 // KDXClient.exe: 004575a0
 bool UText::IsHex(uint inChar)
 {
@@ -171,4 +268,74 @@ uint UText::ToUpper(uint inChar)
 		inChar = (uint)__upper_map[inChar];
 	}
 	return inChar;
+}
+
+THdl UText::UTF8ToUTF16(const void *inText, size_t inSize)
+{
+	char *pcVar1;
+	char cVar2;
+	char *pcVar3;
+	ushort *puVar4;
+	uint uVar5;
+	HGLOBAL pvVar6;
+	uint local_20;
+	size_t local_1c;
+	ushort *local_18;
+	HGLOBAL local_14;
+
+	pcVar1 = (char *)(inSize + (size_t)inText);
+	local_20 = inSize * 2 + 0x12;
+	pcVar3 = (char *)inText;
+	if (inText < pcVar1)
+	{
+		do
+		{
+			cVar2 = *pcVar3;
+			pcVar3 = pcVar3 + 1;
+			if (cVar2 == '\n')
+			{
+				local_20 = local_20 + 2;
+			}
+		} while (pcVar3 < pcVar1);
+	}
+	local_14 = GlobalAlloc(0x2002, local_20);
+	if (local_14 == NULL)
+	{
+		return NULL;
+	}
+	puVar4 = (ushort *)GlobalLock(local_14);
+	local_18 = puVar4;
+	if (inText < pcVar1)
+	{
+		do
+		{
+			uVar5 = DecodeUTF8Char(inText, (size_t)pcVar1 - (size_t)inText, &local_1c);
+			inText = (void *)((size_t)inText + local_1c);
+			if (uVar5 < 0x10000)
+			{
+				if (uVar5 == 10)
+				{
+					*puVar4 = 0xd;
+					puVar4 = puVar4 + 1;
+				}
+				*puVar4 = (ushort)uVar5;
+				puVar4 = puVar4 + 1;
+			}
+			else
+			{
+				*puVar4 = (ushort)(uVar5 - 0x10000 >> 10) & 0x3ff | 0xd800;
+				puVar4[1] = (ushort)uVar5 & 0x3ff | 0xdc00;
+				puVar4 = puVar4 + 2;
+			}
+		} while (inText < pcVar1);
+	}
+	*puVar4 = 0;
+	uVar5 = (size_t)puVar4 + (2 - (size_t)local_18);
+	if (local_20 < uVar5)
+	{
+		__Fail(0x1000a);
+	}
+	GlobalUnlock(local_14);
+	pvVar6 = GlobalReAlloc(local_14, uVar5, 2);
+	return pvVar6;
 }
